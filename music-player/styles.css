@@ -1,0 +1,19 @@
+#music-player {
+  box-shadow: 0 0 15px 10px #09d1b623;
+}
+#song-cover {
+  box-shadow: 0 0 10px 5px #09d1b646;
+}
+
+button {
+  transition: all 0.15s ease-in;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.playlist_song {
+  transition: all 0.11s ease-in;
+}

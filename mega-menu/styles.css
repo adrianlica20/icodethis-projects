@@ -1,0 +1,14 @@
+body {
+  background: linear-gradient(to top right, #ea8d8d, #a890fe);
+}
+
+ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  #container {
+    background: linear-gradient(to top right, #ea8d8d, #a890fe);
+  }
+}

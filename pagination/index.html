@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#f7f8fc] flex flex-col justify-center items-center space-y-20 min-h-screen">
+    <!-- First set of rows: square/square -->
+    <div id="square-square" class="space-y-6">
+        <div id="ss-first_row" class="flex justify-center space-x-2">
+            <button
+                class="w-11 h-11 bg-[#10182f] text-white p-2 font-semibold border border-[#dfe5f6] rounded-md">1</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">2</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">3</button>
+            <button
+                class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">&#8226;&#8226;&#8226;</button>
+            <button class="w-11 h-11 p-2 font-semibold rounded-md flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+        <div id="ss-second_row" class="flex space-x-2">
+            <button class="w-11 h-11 p-2 font-semibold rounded-md flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">1</button>
+            <button
+                class="w-11 h-11 bg-[#10182f] text-white p-2 font-semibold border border-[#dfe5f6] rounded-md">2</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">3</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">4</button>
+            <button
+                class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-md">&#8226;&#8226;&#8226;</button>
+            <button class="w-11 h-11 p-2 font-semibold rounded-md flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Second set of rows: circle/square -->
+    <div id="circle-square" class="space-y-6">
+        <div id="cs-first_row" class="flex justify-center space-x-2">
+            <button
+                class="w-11 h-11 bg-[#10182f] text-white p-2 font-semibold border border-[#dfe5f6] rounded-full">1</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">2</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">3</button>
+            <button
+                class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">&#8226;&#8226;&#8226;</button>
+            <button class="w-11 h-11 p-2 font-semibold rounded-full flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+        <div id="ss-second_row" class="flex space-x-2">
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">1</button>
+            <button
+                class="w-11 h-11 bg-[#10182f] text-white p-2 font-semibold border border-[#dfe5f6] rounded-full">2</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">3</button>
+            <button class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">4</button>
+            <button
+                class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full">&#8226;&#8226;&#8226;</button>
+            <button
+                class="w-11 h-11 bg-[white] p-2 font-semibold border border-[#dfe5f6] rounded-full flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Third set of rows: circle/square with no bg -->
+    <div id="circle-square_nobg">
+        <div id="circle-square" class="space-y-6">
+            <div id="cs-first_row" class="flex justify-center space-x-2">
+                <button class="w-11 h-11 bg-[#10182f] text-white p-2 font-semibold rounded-full">1</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-full">2</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-full">3</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-full">1</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-full flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+            <div id="ss-second_row" class="flex space-x-2">
+                <button class="w-11 h-11 p-2 font-semibold rounded-md flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-md">1</button>
+                <button class="w-11 h-11 bg-[#10182f] text-white p-2 font-semibold rounded-md">2</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-md">3</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-md">4</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-md">1</button>
+                <button class="w-11 h-11 p-2 font-semibold rounded-md flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+</body>
+
+</html>

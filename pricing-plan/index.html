@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#af2730] flex flex-col justify-center items-center min-h-screen overflow-x-hidden sm:relative">
+    <div id="main"
+        class="bg-[#22161a] text-[#b7afb1] box-border px-24 py-10 flex flex-col w-full sm:relative sm:max-w-2xl sm:rounded-lg sm:flex-row sm:space-x-10">
+        <div class="flex flex-col relative py-12 w-full">
+            <h1 class="font-semibold mx-auto text-3xl sm:text-2xl sm:mx-0">Basic</h1>
+            <h3 class="mt-2 text-lg mx-auto sm:mx-0 sm:text-md">Free</h3>
+            <p class="text-sm sm:text-[0.7em] mx-auto sm:mx-0">3.000 monthly visitors</p>
+            <ul class="mt-8 text-sm leading-5 flex flex-col items-center mx-auto sm:mx-0 sm:text-[0.7em] sm:block">
+                <li><span class="hidden sm:inline-block">&#8226;</span> Limited reports</li>
+                <li><span class="hidden sm:inline-block">&#8226;</span> Unlimited projects</li>
+                <li><span class="hidden sm:inline-block">&#8226;</span> Data storage for 1 year</li>
+            </ul>
+            <button id="basic"
+                class="p-3 mx-auto text-[#af2730] rounded border border-[#af2730] mt-10 w-full sm:text-xs">Start
+                now</button>
+        </div>
+
+        <div id="line" class="w-full h-[2px] sm:w-[3px] sm:h-auto bg-[#281c20] sm:block"></div>
+
+        <div class="flex flex-col py-12 w-full">
+            <h2 class="font-semibold text-3xl mx-auto sm:mx-0 sm:text-2xl">Pro</h2>
+            <h3 class="mt-2 text-lg mx-auto sm:mx-0 sm:text-md">$19 / month</h3>
+            <p class="text-sm sm:text-[0.7em] mx-auto sm:mx-0">10.000 monthly visitors</p>
+            <ul class="mt-8 text-sm leading-5 flex flex-col items-center mx-auto sm:mx-0 sm:text-[0.7em] sm:block">
+                <li><span class="hidden sm:inline-block">&#8226;</span> Unlimited reports</li>
+                <li><span class="hidden sm:inline-block">&#8226;</span> 15-days free trial</li>
+                <li><span class="hidden sm:inline-block">&#8226;</span> Data storage for 3 year</li>
+            </ul>
+            <button id="pro"
+                class="p-3 w-full text-[#e3b6b9] border border-[#af2730] rounded bg-[#af2730] mt-10 sm:text-xs">Try
+                it</button>
+        </div>
+    </div>
+
+    <section class="modal hiddenM box-border">
+        <div>
+            <h3 class="titleMessage text-center font-bold text-lg mb-6">Thank you for choosing our product!</h3>
+            <p class="message">
+                We appreciate your trust and we’ll do our best to meet your expectations.
+            </p>
+        </div>
+        <button class="btn mt-6">Back to Shopping</button>
+    </section>
+    <div class="overlay hiddenM"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

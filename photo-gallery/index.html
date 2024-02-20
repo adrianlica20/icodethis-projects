@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-[#dce3e9] flex justify-center items-center min-h-screen">
+    <div
+        class="bg-white container shadow-xl rounded-3xl flex flex-col gap-y-12 p-5 py-10 md:p-10 md:pb-28 md:px-28 max-w-md md:max-w-4xl">
+        <ul
+            class="text-[#2e3336] font-semibold flex flex-wrap justify-center gap-x-5 self-center md:text-xl md:self-end">
+            <li>Vector</li>
+            <li>Illustrations</li>
+            <li>Images</li>
+            <li>Icons</li>
+        </ul>
+
+        <article class="flex justify-between flex-col gap-y-2 md:flex-row">
+            <div class="searchbar-wrapper text-[#b6c1ca] relative md:border-b md:w-5/12 md:text-lg">
+                <input type="search" id="search" name="q" placeholder="Search" class="w-full p-3">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-search absolute right-2 top-1/2 -translate-y-1/2" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                </svg>
+            </div>
+            <button class="bg-[#2e3336] text-white p-3 px-10 rounded-lg hover:opacity-90">Upload</button>
+        </article>
+
+        <section class="grid gap-2 grid-cols-2 md:grid-cols-3">
+            <div class="img-wrapper relative">
+                <img class="h-44 w-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1656189505583-548c35fbc86d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fHNlYXJjaGluZyUyMHRoZSUyMGdsb2JlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <div
+                    class="img-details hidden absolute bottom-0 flex justify-between items-center px-2 w-full h-14 bg-[#5c64687a] text-white">
+                    <div class="flex flex-col justify-center">
+                        <small class="text-sm font-semibold">Choose Destination</small>
+                        <div class="text-xs space-x-1">
+                            <span>245 likes</span>
+                            <span>35 shares</span>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="img-wrapper relative">
+                <img class="h-44 w-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1553697388-94e804e2f0f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <div
+                    class="img-details hidden absolute bottom-0 flex justify-between items-center px-2 w-full h-14 bg-[#5c64687a] text-white">
+                    <div class="flex flex-col justify-center">
+                        <small class="text-sm font-semibold">Pack Your Bags</small>
+                        <div class="text-xs space-x-1">
+                            <span>263 likes</span>
+                            <span>39 shares</span>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="img-wrapper relative">
+                <img class="h-44 w-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1568323993144-20d546ba585d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAwfHx0cmF2ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <div
+                    class="img-details hidden absolute bottom-0 flex justify-between items-center px-2 w-full h-14 bg-[#5c64687a] text-white">
+                    <div class="flex flex-col justify-center">
+                        <small class="text-sm font-semibold">Fly There</small>
+                        <div class="text-xs space-x-1">
+                            <span>330 likes</span>
+                            <span>42 shares</span>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="img-wrapper relative">
+                <img class="h-44 w-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <div
+                    class="img-details hidden absolute bottom-0 flex justify-between items-center px-2 w-full h-14 bg-[#5c64687a] text-white">
+                    <div class="flex flex-col justify-center">
+                        <small class="text-sm font-semibold">Explore the World</small>
+                        <div class="text-xs space-x-1">
+                            <span>887 likes</span>
+                            <span>235 shares</span>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="img-wrapper relative">
+                <img class="h-44 w-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <div
+                    class="img-details hidden absolute bottom-0 flex justify-between items-center px-2 w-full h-14 bg-[#5c64687a] text-white">
+                    <div class="flex flex-col justify-center">
+                        <small class="text-sm font-semibold">Wonder at its Beauty</small>
+                        <div class="text-xs space-x-1">
+                            <span>715 likes</span>
+                            <span>132 shares</span>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="img-wrapper relative">
+                <img class="h-44 w-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1568849676085-51415703900f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <div
+                    class="img-details hidden absolute bottom-0 flex justify-between items-center px-2 w-full h-14 bg-[#5c64687a] text-white">
+                    <div class="flex flex-col justify-center">
+                        <small class="text-sm font-semibold">Follow That Dream</small>
+                        <div class="text-xs space-x-1">
+                            <span>994 likes</span>
+                            <span>412 shares</span>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

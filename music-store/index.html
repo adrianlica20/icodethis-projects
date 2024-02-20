@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+
+<body class="flex justify-center min-h-screen py-3 sm:py-0 sm:items-center">
+    <div id="store-container" class="container flex flex-col gap-y-4 max-w-3xl">
+        <section class="store-header relative flex flex-col gap-y-3 sm:gap-x-0 sm:flex-row sm:justify-between">
+            <h1 class="text-white text-2xl font-light text-center sm:text-left">La Musique</h1>
+            <div class="searchbar flex items-center gap-x-3 w-full relative sm:w-max">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-search absolute left-2 top-2" width="18" height="18"
+                    viewBox="0 1 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                </svg>
+                <input id="searchbar" type="text" placeholder="Search"
+                    class="bg-transparent placeholder:text-white placeholder:text-xs placeholder:opacity-50">
+            </div>
+        </section>
+
+        <!-- Featured Row (TOP ONE) -->
+        <section id="featured" class="flex mt-3 w-full flex-col sm:flex-row sm:gap-x-4 sm:p-5 sm:items-center">
+            <div class="flex flex-col gap-y-3 p-4 sm:gap-y-2 sm:w-[30%]">
+                <h2 class="text-2xl text-white">Explore</h2>
+                <p class="text-white text-sm sm:text-xs">Discover world class composers, artists and bands. Find the
+                    perfect
+                    track
+                    in our
+                    library.
+                </p>
+                <button
+                    class="bg-white p-1.5 px-4 text-[#4a13a3] border border-white text-sm w-max transition hover:bg-transparent hover:text-white">Read
+                    More</button>
+            </div>
+
+            <div class="featured-albums-container gap-1 grid grid-cols-2 sm:gap-y-0 sm:flex sm:w-[70%]">
+                <!-- The Lumineers album -->
+                <div class="featured-album bg-white p-[1.5px] sm:w-3/12">
+                    <img class="w-full object-cover mx-auto"
+                        src="https://upload.wikimedia.org/wikipedia/en/4/4f/Cleopatra_album_cover.jpg" alt="">
+                    <div class="album-descr p-2">
+                        <div class="flex items-center gap-x-2 justify-between flex-wrap">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;15</span>
+                        </div>
+                        <p class="album-title sm:text-xs">Cleopatra</p>
+                    </div>
+                </div>
+
+                <!-- G-Eazy album -->
+                <div class="featured-album bg-white p-[1.5px] sm:w-3/12">
+                    <img class="w-full object-cover mx-auto"
+                        src="https://upload.wikimedia.org/wikipedia/en/7/7a/G-Eazy_These_Things_Happen.jpg" alt="">
+                    <div class="album-descr p-2">
+                        <div class="flex items-center gap-x-2 justify-between flex-wrap">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-sm">&#x20AC;18</span>
+                        </div>
+                        <p class="album-title sm:text-xs">These Things Happen</p>
+                    </div>
+                </div>
+
+                <!-- Post Malone album -->
+                <div class="featured-album bg-white p-[1.5px] sm:w-3/12">
+                    <img class="w-full object-cover mx-auto"
+                        src="https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg" alt="">
+                    <div class="album-descr p-2">
+                        <div class="flex items-center gap-x-2 justify-between flex-wrap">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-sm">&#x20AC;19</span>
+                        </div>
+                        <p class="album-title sm:text-xs">Stoney</p>
+                    </div>
+                </div>
+
+                <!-- Drake album -->
+                <div class="featured-album bg-white p-[1.5px] sm:w-3/12">
+                    <img class="w-full object-cover mx-auto"
+                        src="https://upload.wikimedia.org/wikipedia/en/9/90/Scorpion_by_Drake.jpg" alt="">
+                    <div class="album-descr p-2">
+                        <div class="flex items-center gap-x-2 justify-between flex-wrap">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-sm">&#x20AC;21</span>
+                        </div>
+                        <p class="album-title sm:text-xs">Scorpion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOP 3 container -->
+        <section class="top-3">
+            <h2 class="mb-1 text-white text-lg sm:text-md">TOP 3</h2>
+
+            <div class="top-3-albums-wrapper w-full space-y-1 sm:space-y-0 sm:gap-x-2 sm:h-[6rem] sm:flex">
+                <!-- J COLE -->
+                <div class="top-3-album flex h-max w-full overflow-hidden flex-col sm:flex-row sm:h-full sm:w-1/3">
+                    <img class="h-[9rem] object-cover object-top sm:w-1/2 sm:max-h-[6rem]"
+                        src="https://upload.wikimedia.org/wikipedia/en/7/76/ColeWorld.jpeg" alt="Cole World: The Sideline Story
+                    Studio album by J. Cole cover image">
+                    <div class="top-3-album-descr bg-white p-2 flex flex-col gap-y-1 relative sm:w-1/2">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;18</span>
+                        </div>
+                        <p class="font-semibold leading-tight mb-1 sm:text-[0.658em]">Cole World: The
+                            Sideline Story</p>
+                        <p class="album-details text-[0.75em] leading-snug sm:text-[0.55em]">Cole World: The Sideline
+                            Story is
+                            the debut
+                            studio album
+                            by American
+                            rapper J. Cole. It was released on September 27, 2011, by Roc Nation and Columbia Records,
+                            with distribution from Sony Music. The album is his first studio release, following three
+                            successful mixtapes.</p>
+                    </div>
+                </div>
+
+                <!-- MANESKIN -->
+                <div class="top-3-album flex h-max w-full overflow-hidden flex-col sm:flex-row sm:h-full sm:w-1/3">
+                    <img class="h-[9rem] object-cover object-top sm:w-1/2 sm:max-h-[6rem]"
+                        src="https://upload.wikimedia.org/wikipedia/en/1/10/M%C3%A5neskin_-_Teatro_d%27ira_Vol._1.png"
+                        alt="CTeatro d'ira: Vol. I cover image">
+                    <div class="top-3-album-descr bg-white p-2 flex flex-col gap-y-1 relative sm:w-1/2">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;17</span>
+                        </div>
+                        <p class="font-semibold leading-tight mb-1 sm:text-[0.588em]">Teatro d'ira: Vol.
+                            I
+                        </p>
+                        <p class="album-details text-[0.75em] leading-snug sm:text-[0.55em]">Teatro d'ira: Vol. I is the
+                            second studio
+                            album by Italian rock band Måneskin.[2] It was released on 19 March 2021 through RCA and
+                            Sony. It includes the singles "Vent'anni" and the Sanremo and Eurovision-winning "Zitti e
+                            buoni",[3][4][5] as well as the songs "I Wanna Be Your Slave" and "Coraline".</p>
+                    </div>
+                </div>
+
+                <!-- RUSS -->
+                <div class="top-3-album flex h-max w-full overflow-hidden flex-col sm:flex-row sm:h-full sm:w-1/3">
+                    <img class="h-[9rem] object-cover object-center sm:w-1/2 sm:max-h-[6rem]"
+                        src="https://upload.wikimedia.org/wikipedia/en/6/62/RussThere%27sReallyaWolf.jpg"
+                        alt="There's really a wolf cover image">
+                    <div class="top-3-album-descr bg-white p-2 flex flex-col gap-y-1 relative sm:w-1/2">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;20</span>
+                        </div>
+                        <p class="font-semibold leading-tight mb-1 sm:text-[0.588em]">There's Really a
+                            Wolf</p>
+                        <p class="album-details text-[0.75em] leading-snug sm:text-[0.55em]">There's Really a Wolf is
+                            the
+                            twelfth studio
+                            album and major-label debut by American rapper Russ, who composed and produced all of the
+                            songs. It was released on May 5, 2017, by Diemon and Columbia Records and peaked at number
+                            seven on the US Billboard 200 and number four on the US Top R&B/Hip-Hop Albums.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOMMENDED SECTION -->
+        <section class="recommended">
+            <h2 class="mb-1 text-white text-lg sm:text-md">Recommended for You</h2>
+            <div class="recommended-wrapper w-full grid grid-cols-2 gap-1 sm:gap-y-0 sm:gap-x-[1px] sm:grid-cols-6">
+                <div class="rec-album flex flex-col bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/1b/Khalid_-_Free_Spirit.png" alt="">
+                    <div class="rec-details p-2 space-y-1">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;19</span>
+                        </div>
+                        <p class="text-xs">Free Spirit</p>
+                    </div>
+                </div>
+
+                <div class="rec-album flex flex-col bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/James_Arthur_-_Back_from_the_Edge.jpg"
+                        alt="">
+                    <div class="rec-details p-2 space-y-1">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;22</span>
+                        </div>
+                        <p class="text-xs">Back from the Edge</p>
+                    </div>
+                </div>
+
+                <div class="rec-album flex flex-col bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Charlie_Puth_-_Nine_Track_Mind.png" alt="">
+                    <div class="rec-details p-2 space-y-1">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;20</span>
+                        </div>
+                        <p class="text-xs">Nine Track Mind</p>
+                    </div>
+                </div>
+
+                <div class="rec-album flex flex-col bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/ro/5/55/Illuminate_-_Shawn_Mendes.png" alt="">
+                    <div class="rec-details p-2 space-y-1">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;17</span>
+                        </div>
+                        <p class="text-xs">Illuminate</p>
+                    </div>
+                </div>
+
+                <div class="rec-album flex flex-col bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Chaos_and_the_Calm.jpg" alt="">
+                    <div class="rec-details p-2 space-y-1">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;16</span>
+                        </div>
+                        <p class="text-xs">Chaos and the Calm</p>
+                    </div>
+                </div>
+
+                <div class="rec-album flex flex-col bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/2f/Billie_Eilish_-_Don%27t_Smile_at_Me.png"
+                        alt="">
+                    <div class="rec-details p-2 space-y-1">
+                        <div class=" flex justify-between items-center">
+                            <div class="star-rate flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="#8b9ffe" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star"
+                                    width="10" height="10" viewBox="0 0 24 24" stroke-width="2" stroke="#8b9ffe"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="sm:text-xs">&#x20AC;23</span>
+                        </div>
+                        <p class="text-xs">Don't Smile at Me</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

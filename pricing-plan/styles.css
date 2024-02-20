@@ -1,0 +1,109 @@
+#main::after {
+  content: '';
+  width: 120%;
+  height: 20%;
+  background-color: #9f1d26;
+  box-shadow: 0px -10px 10px #9f1d26;
+  position: absolute;
+  bottom: -50px;
+  right: -60px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+#main {
+  box-shadow: 0 20px 25px -8px rgb(19, 19, 19);
+}
+
+#basic:hover {
+  background-color: #af2730;
+  color: #e3b6b9;
+  scale: calc(110%);
+  transition: all 0.15s ease-in;
+}
+
+#pro:hover {
+  background-color: #22161a;
+  color: #af2730;
+  scale: calc(110%);
+  transition: all 0.15s ease-in;
+}
+
+#pro:active,
+#basic:active,
+#pro:focus,
+#basic:focus {
+  background-color: #188350;
+  border-color: #188350;
+  color: white;
+}
+
+/* MODAL */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  max-width: 450px;
+  padding: 2.3rem 3.3rem;
+  position: absolute;
+  top: 30%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.4rem 0 0.2rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: white;
+  color: #af2730;
+  border: 2px solid #af2730;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: all 0.15s ease-in;
+}
+
+.btn:hover {
+  background-color: #af2730;
+  color: white;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hiddenM {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  #main::after {
+    content: none;
+  }
+
+  #main {
+    min-height: 100vh;
+  }
+}

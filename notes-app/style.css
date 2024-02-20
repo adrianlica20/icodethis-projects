@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background-color: #3a5c495f;
+}
+
+#notes-app {
+  box-shadow: 0 15px 15px -19px #9a9a9a;
+}
+
+main {
+  box-shadow: 0 0 10px rgba(161, 161, 161, 0.51);
+}
+
+.mb-1 a:visited {
+  background-color: #bbae9d;
+}

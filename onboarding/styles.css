@@ -1,0 +1,18 @@
+.icon-tabler-rocket:hover {
+  rotate: -43deg;
+  fill: #ec2276;
+  stroke: black;
+}
+
+#go-back-btn:hover svg {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(-4px);
+  }
+  100% {
+    transform: scaleX(var(--s, 1)) translate(4px);
+  }
+}

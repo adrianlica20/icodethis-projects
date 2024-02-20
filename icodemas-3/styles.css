@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1545735089-fe9e1e4f4569?q=80&w=3033&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal_filter {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  z-index: -1;
+  opacity: 40%;
+}
+
+.discount_modal {
+  max-width: 50rem;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 10px #305c7078;
+  position: relative;
+}
+
+.discount_modal > img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.modal_text {
+  padding: 2rem;
+  padding-top: 5rem;
+  text-align: center;
+  color: #305c70;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  position: relative;
+}
+
+.modal_text_percent {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  width: 5.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #f4ebc9;
+  color: #c1342a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  rotate: -10deg;
+}
+
+.modal_text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal_text p {
+  color: #9ca3b1;
+}
+
+.subscribe_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+#subscribe_email_input,
+#place_order_btn,
+#reject_btn {
+  padding: 0.9rem 0.5rem;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 150ms, color 150ms;
+}
+
+#subscribe_email_input:focus,
+#place_order_btn:focus,
+#reject_btn:focus {
+  outline: 2px solid #227293;
+}
+
+#subscribe_email_input {
+  border-color: #9ca3b1;
+  color: #305c70;
+  background-color: transparent;
+}
+
+#subscribe_email_input:hover {
+  background-color: #f2f2f2;
+}
+
+#subscribe_email_input:focus {
+  background-color: transparent;
+}
+
+#subscribe_email_input::placeholder,
+#reject_btn {
+  color: #9ca3b1;
+}
+
+#place_order_btn {
+  background-color: #227293;
+  color: #fff;
+}
+
+#place_order_btn:hover {
+  background-color: transparent;
+  color: #305c70;
+  border-color: #227293;
+}
+
+#reject_btn {
+  background-color: transparent;
+  margin-top: auto;
+}
+
+#reject_btn:hover {
+  color: #305c70;
+  background-color: #9ca3b114;
+}
+
+.close_modal_btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  transition: scale 150ms;
+}
+
+.close_modal_btn:hover {
+  scale: 1.2;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .discount_modal {
+    width: 100%;
+    max-width: 25rem;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .discount_modal > img {
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .modal_text {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 3rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .modal_text_percent {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 3.5rem;
+    font-size: 1.4rem;
+  }
+
+  .modal_text h2 {
+    font-size: 2rem;
+  }
+
+  .modal_text p {
+    max-width: 20rem;
+    margin: auto;
+  }
+}

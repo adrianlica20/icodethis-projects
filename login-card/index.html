@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Card</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-[#f8efef] flex justify-center items-center min-h-screen">
+    <div class="login-container overflow-hidden flex shadow-lg rounded-lg relative md:max-w-xl">
+
+        <!-- Close window button -->
+        <button class="close-btn absolute right-3 top-3 bg-white opacity-70 rounded-full p-1 hover:opacity-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- User Information -->
+        <div class="flex flex-col gap-5 p-8 px-10 text-xs">
+            <div class="space-y-2">
+                <h1 class="text-xl font-bold">Log In</h1>
+                <p>Log in to your account to upload or download pictures, videos or music.</p>
+            </div>
+
+            <div class="space-y-6">
+                <form class="space-y-2">
+                    <input class="email border p-3 w-full rounded outline-none" type="email"
+                        placeholder="Enter your email address" required>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="text-blue-700 hover:underline">Forgot password?</a>
+                        <button type="submit"
+                            class="submit-btn bg-[#046586] text-white shadow-lg p-2.5 px-5 flex items-center gap-x-2 rounded hover:bg-[#046586]/80">Next
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 12l14 0"></path>
+                                <path d="M15 16l4 -4"></path>
+                                <path d="M15 8l4 4"></path>
+                            </svg></button>
+                    </div>
+                </form>
+
+                <div class="flex flex-col items-center">
+                    <small>Or log in with</small>
+                    <div class="flex gap-x-2 w-full">
+                        <button
+                            class="w-1/2 border border-black/20 p-2 flex items-center justify-center gap-x-1 hover:bg-[#039be5]/10 sm:border-[#e5e7eb]">
+                            <img class="w-6 h-6" src="https://img.icons8.com/color/256/facebook-new.png" alt="">
+                            Facebook</button>
+                        <button
+                            class="w-1/2 border border-black/20 p-2 flex items-center justify-center gap-x-1 hover:bg-[#4caf50]/10 sm:border-[#e5e7eb]">
+                            <img class="w-6 h-6" src="https://img.icons8.com/color/256/google-logo.png" alt="">
+                            Google</button>
+                    </div>
+                </div>
+
+                <p class="text-center text-[0.6rem]">Don't have an account yet? <a href="#"
+                        class="text-blue-700 underline">Sign up</a></p>
+            </div>
+        </div>
+
+        <div class="hidden sm:block sm:max-w-[40%]">
+            <img class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1568145675395-66a2eda0c6d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="">
+        </div>
+    </div>
+
+    <!-- Open login window -->
+    <button class="open-login hidden text-[#046586] flex flex-col items-center hover:text-[#046586]/60">
+        <p class="font-semibold">Click to login</p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="34" height="34"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+            <path d="M3 7l9 6l9 -6"></path>
+        </svg>
+    </button>
+
+    <!-- Modal -->
+    <section class="modal hiddenM box-border flex flex-col items-center gap-y-3 rounded-lg p-10 w-max text-black">
+        <h3 class="titleMessage tracking-wider font-bold text-xl">Welcome to our platform!</h3>
+        <button
+            class="btn border rounded p-1.5 px-5 transition hover:border-[#5492d1] border-black hover:bg-[#242141]/10">Back</button>
+    </section>
+    <div class="overlay hiddenM"></div>
+</body>
+
+</html>

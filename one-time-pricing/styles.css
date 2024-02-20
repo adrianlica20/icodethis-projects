@@ -1,0 +1,43 @@
+/* To compensate the space the :before pseudo-element takes, I gave the body a 1rem padding on each side */
+body {
+  padding: 1rem;
+}
+
+section {
+  position: relative;
+  background-color: white;
+  font-size: small;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 20rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* The absolutely positioned :before pseudo-element creates a horizontal scroll on smaller screens */
+section:before {
+  position: absolute;
+  /* 100% of its parent, the <section>, plus 1rem on each side (this issue needed the compensation on the <body>) */
+  width: calc(100% + 2rem);
+  left: 50%;
+  translate: -50% 0;
+  top: -1rem;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+div:has(.icon-check) {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.icon-check {
+  /* The icon keeps its initial size */
+  flex-shrink: 0;
+}
+
+/* All the other styles have been added using TailwindCSS */

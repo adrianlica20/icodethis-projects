@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#e9f2ef] flex justify-center items-center min-h-screen">
+    <div id="movie-card" class="bg-[#f9fafc] shadow-lg rounded-t-md overflow-hidden w-full sm:max-w-xs">
+        <div id="image-container" class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-arrow-narrow-left absolute top-2 left-2 text-[#fff] z-10 hover:cursor-pointer hover:scale-110"
+                width="38" height="44" viewBox="0 0 24 24" stroke-width="1.2" stroke="#fff" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="5" y1="12" x2="9" y2="16" />
+                <line x1="5" y1="12" x2="9" y2="8" />
+            </svg>
+            <img class="w-full object-cover object-top relative h-[16rem] sm:h-[12rem]"
+                src="https://www.tvguide.com/a/img/resize/37927db9b380c0a6858253e63ed9bdabeeaea763/catalog/provider/1/2/1-5164672802.jpg?auto=webp&fit=crop&height=675&width=1200"
+                alt="">
+            <div class="flex flex-col absolute bottom-3 left-3 z-10 text-white">
+                <h1 class="font-bold text-xs">Guardians of the Galaxy Vol. 2</h1>
+                <div class="flex">
+                    <svg class="w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <p class="text-[0.5rem]">Cineplex Entertainment, Toronto ON</p>
+                </div>
+            </div>
+        </div>
+        <div id="seating-container" class="p-2 flex flex-col">
+            <!-- Seating Legend -->
+            <div id="seating-legend" class="w-full flex justify-center space-x-5 mt-2 mb-3">
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" viewBox="0 0 640 512">
+                        <path fill="#59889d"
+                            d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                        </path>
+                    </svg>
+                    <span class="text-[#66777f] text-[0.6rem] ml-1">Available</span>
+                </div>
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" viewBox="0 0 640 512">
+                        <path fill="#c9d8df"
+                            d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                        </path>
+                    </svg>
+                    <span class="text-[#66777f] text-[0.6rem] ml-1">Booked</span>
+                </div>
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" viewBox="0 0 640 512">
+                        <path fill="#ec407a"
+                            d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                        </path>
+                    </svg>
+                    <span class="text-[#66777f] text-[0.6rem] ml-1">Selected</span>
+                </div>
+            </div>
+            <!-- Seating Rows -->
+            <div id="seatingRows" class="flex space-x-7 pr-4 mx-auto">
+                <!-- Left seats -->
+                <div id="left-seats" class="space-y-2">
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">G</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">F</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">E</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">D</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">C</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">B</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <span class="font-bold text-gray-300 text-[0.6rem] w-2">A</span>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right seats -->
+                <div id="right-seats" class="space-y-2">
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#c9d8df"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seatingRow flex items-center space-x-2">
+
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                            <svg class="hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1em" viewBox="0 0 640 512">
+                                <path fill="#59889d"
+                                    d="M160 224v64h320v-64c0-35.3 28.7-64 64-64h32c0-53-43-96-96-96H160c-53 0-96 43-96 96h32c35.3 0 64 28.7 64 64zm416-32h-32c-17.7 0-32 14.3-32 32v96H128v-96c0-17.7-14.3-32-32-32H64c-35.3 0-64 28.7-64 64c0 23.6 13 44 32 55.1V432c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-16h384v16c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V311.1c19-11.1 32-31.5 32-55.1c0-35.3-28.7-64-64-64z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Screen -->
+            <div id="screen" class="w-full flex flex-col items-center mt-5 mb-3">
+                <div class="font-bold text-[0.5rem] text-[#bfcfd6] absolute">Screen</div>
+                <div class="w-10/12 h-6 border-[#7fa5b5] border-b-2 mx-auto rounded-[40%] relative">
+                    <div id="screen-shadow"
+                        class="w-10/12 h-6 absolute border-[#d4e5ed] border-b-4 bottom-0 left-0 right-0 mx-auto rounded-[25%] opacity-50">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing & Date -->
+        <div id="bottom-info" class="flex items-center w-full text-white text-[0.7rem] leading-5 h-20 sm:h-16">
+            <div id="info-name" class="flex flex-col justify-center h-full bg-[#db3769] px-2">
+                <span>Date</span>
+                <span>Tickets</span>
+                <span class="font-semibold text-xs">TOTAL</span>
+            </div>
+            <div id="info-stats" class="flex flex-col justify-center h-full grow bg-[#ec407a] px-2 relative">
+                <span>Jul 11, 19:15</span>
+                <span id="ticket-count">3</span>
+                <span id="price" class="font-semibold text-xs">$31</span>
+                <div id="next-btn"
+                    class="bg-white w-max h-max pl-4 p-2 text-black box-border absolute right-3 rounded-lg flex items-center justify-center font-semibold text hover:cursor-pointer hover:scale-105">
+                    Next<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.4"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

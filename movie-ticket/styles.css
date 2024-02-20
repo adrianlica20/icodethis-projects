@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#image-container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to right top, rgb(100, 99, 153), transparent);
+}

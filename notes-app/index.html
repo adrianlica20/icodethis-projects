@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="notes-app"
+        class="bg-[#f9f9f9] flex flex-col gap-y-2 w-full h-full sm:border-2 sm:border-[#f4f1ea] sm:h-4/6 sm:max-w-4xl">
+        <div class="heading-section flex justify-between items-center bg-[#f4f1ea] shadow px-2 py-3">
+            <div class="flex gap-x-3 items-center">
+
+                <svg id="theme-toggle" xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-bulb hover:cursor-pointer" width="27" height="27"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="#919190" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path>
+                    <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path>
+                    <path d="M9.7 17l4.6 0"></path>
+                </svg>
+                <div>
+                    <h1 class="title text-sm font-semibold text-[#38210f]">Learn How To Motivate Yourself</h1>
+                    <p class="text-[0.6em] text-[#919190] "><span class="total-words">48.240</span> total words | 4
+                        sessions</p>
+                </div>
+            </div>
+            <div class="gap-x-2 hidden sm:flex">
+                <button class="text-sm text-[#919190] ">Delete</button>
+                <button class="flex text-sm text-[#919190] ">Export <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-down" width="20" height="20" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 9l6 6l6 -6"></path>
+                    </svg></button>
+            </div>
+
+            <!-- Hamburger dropdown -->
+            <nav class="fixed right-0 top-1 sm:hidden">
+                <div class="lg:hidden">
+                    <button class="navbar-burger flex items-center text-[#38210f] p-3">
+                        <svg class="block h-4 w-4 fill-[#38210f]" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-200 opacity-25"></div>
+                <nav
+                    class="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm p-2.5 bg-white border-l overflow-y-auto">
+                    <button class="navbar-close self-end">
+                        <svg class="h-6 w-6 text-[#38210f] cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="burger-link block p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">Home</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="burger-link block p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">Delete</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="burger-link flex p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">Export <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-chevron-down" width="20" height="20"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M6 9l6 6l6 -6"></path>
+                                    </svg></a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">
+                                    <div class="leading-none">
+                                        <h2 class="font-semibold flex items-center gap-x-5">Sessions <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-chevron-down" width="20" height="20"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg></h2>
+                                        <p class="text-[0.6em] text-[#919190] "><span class="total-words">48.240</span>
+                                            total words</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <main class="flex gap-x-[2.5px] h-full sm:mx-2">
+            <div id="sessions" class="bg-white pt-2 hidden sm:block sm:p-4">
+                <div class="add-session flex gap-x-2 items-center">
+                    <svg id="addBtn" xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-circle-plus transition stroke-white fill-[#409d69] hover:cursor-pointer hover:scale-110"
+                        width="34" height="34" viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                        <path d="M9 12l6 0"></path>
+                        <path d="M12 9l0 6"></path>
+                    </svg>
+                    <div class="leading-none">
+                        <h2 class="font-semibold">Sessions</h2>
+                        <p class="text-[0.6em] text-[#919190] "><span class="total-words">48.240</span> total words</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-search transition hidden sm:inline-block hover:cursor-pointer hover:scale-125"
+                        width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                        <path d="M21 21l-6 -6"></path>
+                    </svg>
+                </div>
+                <div class="sessions-name flex flex-col gap-y-3 mt-3">
+                    <div
+                        class="leading-none pl-2 py-1 rounded hover:cursor-pointer hover:bg-[#409d69] hover:text-white [&>p]:hover:text-[#f9f7f4]">
+                        <h3 class="font-semibold text-sm">Intro</h3>
+                        <p class="text-[0.6em] text-[#919190] ">2450 words</span>
+                    </div>
+                    <div
+                        class="leading-none pl-2 py-1 rounded hover:cursor-pointer hover:bg-[#409d69] hover:text-white [&>p]:hover:text-[#f9f7f4]">
+                        <h3 class="font-semibold text-sm">Chapter 1</h3>
+                        <p class="text-[0.6em] text-[#919190] ">2450 words</span>
+                    </div>
+                    <div
+                        class="leading-none pl-2 py-1 rounded hover:cursor-pointer hover:bg-[#409d69] hover:text-white [&>p]:hover:text-[#f9f7f4]">
+                        <h3 class="font-semibold text-sm">Chapter 2</h3>
+                        <p class="text-[0.6em] text-[#919190] ">2450 words</span>
+                    </div>
+                    <div
+                        class="leading-none pl-2 py-1 rounded hover:cursor-pointer hover:bg-[#409d69] hover:text-white [&>p]:hover:text-[#f9f7f4]">
+                        <h3 class="font-semibold text-sm">Chapter 3</h3>
+                        <p class="text-[0.6em] text-[#919190] ">2450 words</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="writing-space bg-white w-full text-lg font-semibold p-3 sm:pt-2 sm:p-4">
+                <div class="writing-space_header flex justify-between">
+                    <h2>Chapter 2</h2>
+                    <div class="space-edit-btns flex gap-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-pencil hover:cursor-pointer hover:scale-110 hidden sm:inline-block"
+                            width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="#919190" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                            <path d="M13.5 6.5l4 4"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="#919190" width="18" height="18"
+                            class="hover:cursor-pointer hover:scale-110 hidden sm:inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-dots-vertical hover:cursor-pointer hover:scale-110"
+                            width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="#919190" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                            <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                            <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text-body space-y-3 mt-4">
+                    <p class="font-light text-xs">Life itself is but what you deem it. - Marcus Aurelius.
+                        Happiness starts with improving your own way of thinking, not by forcing the world around you to
+                        adapt to your wishes.
+                        If you choose to focus only on the bad things, your whole life will seem bad to you.</p>
+                    <p class="font-light text-xs"><b>The progress principle</b>: pleasure comes more from making
+                        progress
+                        toward goals
+                        than from achieving
+                        them.
+                        This one is also true for getting better outcomes in life. As James Clear said: if you want
+                        better results, then forget about setting goals. Focus on your system instead. Goals are good
+                        for setting a direction, but systems are best for making progress.</p>
+                    <p class="font-light text-xs">
+                        <b>The adaptation principle</b>: in the long run, it doesn’t much matter what happens to you.
+                        Good
+                        fortune or bad, you will always return to your happiness set point -your brain’s default level
+                        of happiness- which was determined largely by your genes.
+                    </p>
+                    <p class="font-light text-xs">
+                        Happiness doesn't come just from within, or even from a combination of internal and external
+                        factors, but from <b><i>between</i></b>.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

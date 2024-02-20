@@ -1,0 +1,36 @@
+.neumorphism-container {
+  cursor: pointer;
+  box-shadow: 10px 10px 14px 0 rgb(225, 226, 228),
+    -8px -8px 18px 0 rgb(255, 255, 255);
+}
+
+.neumorphism {
+  cursor: pointer;
+  box-shadow: 10px 10px 14px 0 rgb(225, 226, 228),
+    -8px -8px 18px 0 rgb(255, 255, 255);
+}
+
+.neumorphism-act:hover {
+  box-shadow: 10px 10px 14px 0 rgb(225, 226, 228),
+    -8px -8px 18px 0 rgb(255, 255, 255);
+}
+
+.reverse-neumorphism {
+  box-shadow: 7px 7px 7px 0 rgb(226, 223, 223) inset,
+    -7px -7px 7px 0 rgb(243, 243, 243) inset;
+}
+
+.neumorphism-act:active {
+  box-shadow: 7px 7px 7px 0 rgb(226, 223, 223) inset,
+    -7px -7px 7px 0 rgb(243, 243, 243) inset;
+}
+
+.blue-btn {
+  box-shadow: 6px 6px 10px 0 rgba(112, 130, 231, 0.8),
+    -8px -8px 18px 0 rgb(248, 249, 255);
+}
+
+.blue-btn:active {
+  box-shadow: 7px 7px 7px 0 rgba(29, 35, 110, 0.7) inset,
+    -7px -7px 7px 0 rgb(162, 169, 226) inset;
+}

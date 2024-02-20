@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#325d64] flex justify-center items-center min-h-screen">
+    <div class="container max-w-xl flex flex-col bg-white rounded-xl overflow-hidden shadow-3xl">
+        <div id="title" class="w-full bg-[#f2fcfe] py-8">
+            <h1 class="font-semibold text-lg text-[#487177] mx-auto text-center w-7/12">If you write a book about
+                failure, and it doesn't sell, is it called a success?</h1>
+        </div>
+        <div id="status-bars">
+            <div id="top-bar" class="p-9 border-[#f8f8f8] border-b-2">
+                <div class="checkbox-container">
+                    <input type="checkbox" name="checkbox" id="success-input">
+                    <label for="checkbox" class="label text-[#4f767b] font-semibold text-lg">Definitely a
+                        success.</label>
+                </div>
+                <div class="progressBar flex justify-between">
+                    <div class="sliderBar rounded-full overflow-hidden">
+                        <div class="progress-bar rounded-full" style="--width: 65"></div>
+                    </div>
+                    <span class="percent font-bold text-xl text-[#457076] ml-4">65%</span>
+                </div>
+            </div>
+            <div id="middle-bar" class="p-9 border-[#f8f8f8] border-b-2">
+                <div class="checkbox-container">
+                    <input type="checkbox" name="checkbox" id="no-input">
+                    <label for="checkbox" class="label text-[#4f767b] font-semibold text-lg">No.</label>
+                </div>
+                <div class="progressBar-mid flex justify-between">
+                    <div class="sliderBar-mid rounded-full overflow-hidden">
+                        <div class="progress-bar-mid progress-bar rounded-full" style="--width: 12"></div>
+                    </div>
+                    <span class="percent font-bold text-xl text-[#457076] ml-4">12%</span>
+                </div>
+            </div>
+            <div id="bottom-bar" class="p-9">
+                <div class="checkbox-container">
+                    <input type="checkbox" name="checkbox" id="only-input">
+                    <label for="checkbox" class="label text-[#4f767b] font-semibold text-lg">Only if it's in the How To
+                        section of the library.</label>
+                </div>
+                <div class="progressBar-bottom flex justify-between">
+                    <div class="sliderBar-bottom rounded-full overflow-hidden">
+                        <div class="progress-bar-bottom progress-bar rounded-full" style="--width: 23"></div>
+                    </div>
+                    <span class="percent font-bold text-xl text-[#457076] ml-4">23%</span>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="flex justify-center items-center p-12 border-[#f8f8f8] border-t-2">
+            <button id="submit"
+                class="p-4 px-14 rounded-xl text-lg font-semibold text-white bg-[#06b3d5] shadow-xl transition hover:scale-110">Submit</button>
+        </div>
+    </div>
+    <div class="hidden thanks flex flex-col p-12 space-y-8 rounded-xl bg-[#06b3d5] shadow-xl">
+        <p class="text-3xl font-semibold text-white">Thank you for your submission!</p>
+        <button id="back"
+            class="p-4 rounded-xl w-1/2 mx-auto text-sm text-white font-semibold bg-[#d54609] transition hover:scale-110">Go
+            back</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

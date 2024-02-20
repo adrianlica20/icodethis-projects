@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, black, #7932df, black);
+}
+
+#searchbar {
+  outline: none;
+  border: 1px solid #efdc362a;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 200;
+  width: 100px;
+  padding: 5px 0 5px 30px;
+  transition: all 0.3s linear;
+}
+
+#searchbar:focus {
+  width: 200px;
+}
+
+.store-header::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #efdc364d;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+#featured {
+  background: url('https://images.unsplash.com/photo-1555400113-bbd3bad0650c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-position: top;
+  background-size: cover;
+}
+
+.top-3-album-descr::after {
+  content: '';
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, white, #ffffff50);
+}
+
+.featured-album,
+.top-3-albums-wrapper > div,
+.rec-album {
+  transition: all 0.12s ease-in;
+}
+
+.featured-album:hover,
+.top-3-albums-wrapper > div:hover,
+.rec-album:hover {
+  scale: 1.02;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .store-header::after {
+    display: none;
+  }
+
+  #searchbar {
+    width: 100%;
+  }
+
+  #searchbar:focus {
+    width: 100%;
+  }
+
+  .top-3-album-descr::after {
+    display: none;
+  }
+
+  .star-rate {
+    margin-bottom: 7px;
+  }
+
+  .star-rate > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .featured-album:hover,
+  .top-3-albums-wrapper > div:hover,
+  .rec-album:hover {
+    scale: 1;
+    cursor: pointer;
+  }
+}

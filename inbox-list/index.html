@@ -1,0 +1,69 @@
+<html>
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[#0D1426] min-h-screen flex items-center justify-center">
+      <main id="msgs-container" class="hidden bg-[#0A0F1B] p-3 text-blue-100 max-w-lg relative">
+            <!-- Close button -->
+            <button id="close-btn"
+                  class="absolute w-8 h-8 flex items-center justify-center bg-[#0A0F1B] -top-8 right-0 hover:scale-105">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                  </svg>
+            </button>
+
+            <!-- Search bar -->
+            <div class="relative mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 text-[#33394f]" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                        class="absolute left-2 top-1/2 -translate-y-1/2 icon-tabler-search text-[#4b526e]" width="28"
+                        height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                        <path d="M21 21l-6 -6"></path>
+                  </svg>
+                  <input id="searchbar" type="search"
+                        class="bg-[#11182E] w-full text-sm text-[#848eb5] p-3 pl-10 outline-none placeholder:text-sm"
+                        placeholder="Search" spellcheck="false">
+            </div>
+
+            <ul id="users-list" class="space-y-1 relative">
+                  <!-- Users go here -->
+            </ul>
+      </main>
+
+
+      <!-- Notification tab -->
+      <div id="msg-notification"
+            class="bg-[#0A0F1B] w-44 h-44 text-[#6c779d] flex flex-col items-center justify-center text-center text-sm transition-all hover:scale-110 hover:cursor-pointer hover:shadow-xl">
+            <div
+                  class="relative after:absolute after:content-['5'] after:w-5 after:h-5 after:-top-0.5 after:-right-0.5 after:bg-[#4D8B07] after:text-white after:flex after:justify-center after:items-center after:text-xs after:rounded after:animate-bounce">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4"></path>
+                  </svg>
+            </div>
+            <p>You have <br> <span class="font-semibold text-[#8f9bc8]">5 new messages</span></p>
+      </div>
+</body>
+
+</html>

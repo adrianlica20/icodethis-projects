@@ -1,0 +1,120 @@
+/* TOP BAR */
+.progressBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sliderBar {
+  width: 100%;
+  height: 1rem;
+  background-color: #f3f3f3;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  width: calc(var(--width, 0) * 1%);
+  min-width: 1%;
+  max-width: 100%;
+  height: 100%;
+  background-color: #99e970;
+  border: none;
+}
+
+/* MIDDLE BAR*/
+
+.progressBar-mid {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sliderBar-mid {
+  width: 100%;
+  height: 1rem;
+  background-color: #f3f3f3;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-mid {
+  width: calc(var(--width, 0) * 1%);
+  min-width: 1%;
+  max-width: 100%;
+  height: 100%;
+  background-color: #ff5f57;
+  border: none;
+}
+
+/* BOTTOM BAR*/
+
+.progressBar-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sliderBar-bottom {
+  width: 100%;
+  height: 1rem;
+  background-color: #f3f3f3;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-bottom {
+  width: calc(var(--width, 0) * 1%);
+  min-width: 1%;
+  max-width: 100%;
+  height: 100%;
+  background-color: #ff994e;
+  border: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.checkbox-container label {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+input[type='checkbox']::after {
+  content: '\2713';
+  font-size: 20px;
+  display: none;
+}
+
+input[type='checkbox']:hover {
+  background-color: #e0e0e0;
+}
+
+input[type='checkbox']:checked {
+  background-color: #09b2d5;
+  border-color: #09b2d5;
+}
+
+input[type='checkbox']:checked::after {
+  display: block;
+  color: #fff;
+}

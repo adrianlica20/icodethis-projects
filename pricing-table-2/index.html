@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table 2</title>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex justify-center items-center">
+    <div class="main-container flex flex-col justify-center items-center gap-y-5 max-w-2xl">
+
+        <!-- Heading & Toggle Plans -->
+        <div
+            class="heading flex flex-col gap-y-2 text-[#073236] w-full items-center sm:gap-y-0 sm:flex-row sm:justify-between">
+            <h1 class="text-xl font-bold sm:text-2xl sm:font-extrabold">Choose your plan</h1>
+            <div class="toggle-container bg-[#d4d9df] p-1 flex gap-x-1.5 items-center rounded-full relative w-40">
+                <div id="selected" class="bg-white absolute left-0.5 top-0.5 w-1/2 rounded-full h-7"></div>
+                <div class="w-1/2 z-10 flex justify-center items-center p-1 px-2 h-full w-full rounded-full">
+                    <input type="radio" id="monthly" name="pricing-plan" value="monthly" />
+                    <label for="monthly"
+                        class="monthly-label text-xs text-center font-semibold transition hover:cursor-pointer">Monthly</label>
+                </div>
+                <div class="w-1/2 z-10 flex justify-center items-center p-1 px-2 h-full w-full rounded-full">
+                    <input type="radio" id="yearly" name="pricing-plan" value="yearly" />
+                    <label for="yearly"
+                        class="yearly-label text-xs text-center font-semibold transition hover:cursor-pointer">Yearly</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans flex flex-col gap-y-5 m:gap-y-0 sm:gap-x-5 sm:flex-row sm:justify-between">
+            <!-- Starter Plan -->
+            <div class="starter-plan bg-[#dcf0f0] text-[#01343b] flex flex-col gap-y-3 p-6 max-w-[20rem]">
+                <h2 class="font-bold tracking-wider">Starter</h2>
+                <div>
+                    <p class="starter-price font-semibold">$8.99 / month</p>
+                    <p class="billed text-sm">Billed monthly</p>
+                </div>
+                <p class="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum deleniti esse dicta
+                    ipsum
+                    hic aut quis
+                    animi tempora accusantium unde vel eum cupiditate autem dolorem eligendi, facilis, beatae officia
+                    at.
+                </p>
+                <button id="starter"
+                    class="bg-white text-[#164849] border border-[#164849] p-2 w-full rounded text-sm">Get
+                    started</button>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="professional-plan bg-[#01343b] text-[#fefefe] flex flex-col gap-y-3 p-6 max-w-[20rem]">
+                <h2 class="font-bold tracking-wider">Professional</h2>
+                <div>
+                    <p class="professional-price font-semibold">$21.99 / month</p>
+                    <p class="billed text-sm">Billed monthly</p>
+                </div>
+                <p class="text-xs text-[#aed1d5]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
+                    deleniti esse dicta
+                    ipsum
+                    hic aut quis
+                    animi tempora accusantium unde vel eum cupiditate autem dolorem eligendi, facilis, beatae officia
+                    at.
+                </p>
+                <button id="pro" class="bg-white border border-[#07383d] text-[#07383d] p-2 w-full rounded text-sm">Get
+                    started</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="modal hiddenM box-border">
+        <div>
+            <h3 class="titleMessage text-center font-bold text-lg mb-6">Thank you for choosing our product!</h3>
+            <p class="message">
+                We appreciate your trust and we’ll do our best to meet your expectations.
+            </p>
+        </div>
+        <button class="btn mt-6">Back to Plans</button>
+    </section>
+    <div class="overlay hiddenM"></div>
+</body>
+
+</html>
