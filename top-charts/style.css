@@ -1,0 +1,40 @@
+body::after {
+  content: '';
+  width: 130%;
+  height: 40%;
+  position: absolute;
+  background-color: #e36a7d;
+  top: -10%;
+  rotate: -3deg;
+}
+
+.back:hover {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(-4px);
+  }
+  100% {
+    transform: scaleX(var(--s, 1)) translate(4px);
+  }
+}
+
+article {
+  transition: all 0.15s ease-in;
+}
+
+article:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(233, 233, 233, 0.5);
+  scale: 1.01;
+}
+
+@media screen and (max-width: 640px) {
+  body::after {
+    width: 100%;
+    top: 0%;
+    rotate: 0deg;
+  }
+}

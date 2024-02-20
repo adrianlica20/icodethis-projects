@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Charts</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-[#7ec3e2] flex flex-col justify-center items-center min-h-screen">
+    <div id="upperContainer" class="bg-white flex flex-col items-center p-7 w-[15rem] h-[16rem] hover:cursor-pointer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Friendsphoebe.jpg"
+            class="h-[6rem] w-[6rem] object-cover object-top rounded-full" alt="">
+        <h1 class="font-bold text-xs mt-3 mb-1">Phoebe Buffay</h1>
+        <div id="job"
+            class="text-[0.7rem] text-[#30b2f9] font-semibold p-[0.2rem] px-3 border border-[#30b2f9] rounded-full transition-all hover:cursor-pointer hover:bg-[#30b2f9] hover:text-white">
+            UI/UX Designer</div>
+        <p class="text-xs text-center my-3">One of the greatest television characters of all time.</p>
+    </div>
+    <div id="bottomContainer" class="w-[16.5rem] h-[16rem] bg-[#243740] flex flex-col items-center p-3">
+        <h2 class="text-white text-sm mb-2 mt-2">Projects</h2>
+        <div id="wheel" class="text-white flex flex-col items-center mb-5 hover:cursor-pointer">
+            <span class="tracking-wider">314</span>
+            <span class="text-[0.7rem] text-[#667075]">Total</span>
+        </div>
+        <div id="stats" class="flex gap-x-5 justify-center w-full bg-[#1f2930] p-2 mb-1">
+            <div class="flex flex-col items-center text-white text-xs text-semibold">167
+                <span class="text-[0.6rem] text-[#667075]">Completed</span>
+                <span class="w-[4px] h-[4px] rounded-full mt-1 bg-[#01e5c1]"></span>
+            </div>
+            <div class="flex flex-col items-center text-white text-xs text-semibold">24
+                <span class="text-[0.6rem] text-[#667075]">Overdue</span>
+                <span class="w-[4px] h-[4px] rounded-full mt-1 bg-[#e8b701]"></span>
+            </div>
+            <div class="flex flex-col items-center text-white text-xs text-semibold">123
+                <span class="text-[0.6rem] text-[#667075]">In Progress</span>
+                <span class="w-[4px] h-[4px] mt-1 bg-[#8168fa] rounded-full"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

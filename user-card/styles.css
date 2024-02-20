@@ -1,0 +1,8 @@
+* {
+  color: #1c2b62;
+}
+
+.card {
+  border-radius: 25px;
+  box-shadow: 0 32px 0 -15px #e6effa;
+}

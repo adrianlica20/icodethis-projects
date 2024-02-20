@@ -1,0 +1,31 @@
+body::before {
+  content: '';
+  width: 100vw;
+  height: 25vh;
+  background: linear-gradient(to right, #7a70d3, #ca91ce);
+  position: absolute;
+  top: 0;
+}
+
+body::after {
+  content: '';
+  width: 100vw;
+  height: 1rem;
+  background: #eae9ee;
+  position: absolute;
+  top: 25vh;
+  z-index: -1;
+}
+
+img {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.555);
+}
+
+.card-component {
+  transition: all 0.5s ease;
+}
+
+.card-component:hover {
+  cursor: pointer;
+  scale: 1.05;
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: radial-gradient(#00b6c0, #004e57);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.1s ease-in;
+  box-shadow: 2px 2px 8px #005a64;
+}
+
+button:last-of-type {
+  margin-right: 0;
+}
+
+button:hover {
+  background-color: #009ea7;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 2px 2px 15px inset #005a64;
+}
+
+.progress-container {
+  height: 10px;
+  width: 80%;
+  max-width: 768px;
+  background-color: #024d5f;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-image: linear-gradient(to right, #68c4ed, #65ebc2);
+  width: 63%;
+  min-width: 1%;
+  max-width: 100%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.progress-percent {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  width: 50px;
+  height: 30px;
+  background-color: #005164;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.pointer {
+  height: 8px;
+  width: 4px;
+  background-color: #005164;
+  margin: 0 auto;
+  border-radius: 100px 0 0 0;
+  position: absolute;
+  right: 0.5px;
+  bottom: -15px;
+}
+.pointer2 {
+  height: 8px;
+  width: 4px;
+  background-color: #005164;
+  margin: 0 auto;
+  border-radius: 0 100px 0 0;
+  position: absolute;
+  right: -0.5px;
+  bottom: -15px;
+}

@@ -1,0 +1,64 @@
+#stats {
+  box-shadow: 3px 3px 10px #172127, -3px -3px 10px #172127;
+}
+
+#wheel {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: conic-gradient(
+    #efba01 0deg 30deg,
+    #8069da 30deg 160deg,
+    #03e3c1 160deg
+  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wheel span {
+  z-index: 2;
+}
+
+#wheel::after {
+  content: '';
+  background-color: #25363f;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#upperContainer {
+  z-index: 0;
+  position: absolute;
+}
+
+#bottomContainer {
+  z-index: 1;
+}
+
+.envelope {
+  box-shadow: 0 -11px 14px -6px rgb(73, 0, 95);
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}

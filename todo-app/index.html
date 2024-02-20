@@ -1,0 +1,54 @@
+<html>
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#1b1d5f] flex justify-center items-center min-h-screen">
+      <div class="bg-white text-[#181028] shadow-lg flex flex-col w-full max-w-[350px] sm:w-[350px] md:max-w-lg">
+            <div class="ellipse bg-[#45b6ab] p-5 text-white flex gap-x-6 h-[100px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="hover:cursor-pointer fixed" width="34" height="34"
+                        viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 12l14 0"></path>
+                        <path d="M5 12l4 4"></path>
+                        <path d="M5 12l4 -4"></path>
+                  </svg>
+
+                  <div class="flex flex-col items-center mx-auto">
+                        <span class="font-bold text-lg">Thu, April 13, 2023</span>
+                        <span><span id="tasks-number">0</span> task(s)</span>
+                  </div>
+            </div>
+
+            <div id="all-tasks-container" class="p-5 text-[#6d8584] flex flex-col gap-y-7">
+            </div>
+
+            <button id="add-task-btn"
+                  class="bg-[#57eedf] w-14 h-14 rounded-full flex items-center justify-center text-white self-end mr-5 mb-5 transition hover:shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="35"
+                        height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                  </svg>
+            </button>
+      </div>
+
+      <!-- MODAL SECTION -->
+      <section class="modal hiddenM">
+            <label>What task would you like to add?</label>
+            <input type="text" class="task-name" spellcheck="false">
+            <button class="confirm-task-btn hover:bg-[#45b6ab]/60">ADD TASK</button>
+      </section>
+      <div class="overlay hiddenM"></div>
+      <!-- END OF MODAL SECTION -->
+</body>
+
+</html>

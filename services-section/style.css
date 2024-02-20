@@ -1,0 +1,21 @@
+.icon-style {
+  flex-shrink: 0;
+}
+
+.component {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.component:hover {
+  box-shadow: 0 8px 13px #cdd4f9;
+}
+
+a {
+  cursor: pointer;
+  transition: text-shadow 0.12s ease-in;
+}
+
+a:hover {
+  text-shadow: 0.5px 0.5px 1px #0000ff42;
+}

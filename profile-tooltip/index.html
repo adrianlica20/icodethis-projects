@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Tooltip</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gradient-to-br from-[#9681e5] to-[#322d75] flex justify-center items-center min-h-screen">
+    <div id="profile-container" class="flex flex-col space-y-36 w-full p-4 sm:p-0 sm:w-[30rem]">
+
+        <!-- PROFILE 1 -->
+        <button id="profile-1"
+            class="max-w-xs bg-[#7263bc] w-[4rem] h-[4rem] rounded-full flex items-center justify-center box-border relative self-end">
+            <img src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGFydGlzdGljJTIwcG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="Man with sunglasses" class="w-[3rem] h-[3rem] rounded-full object-cover">
+            <!-- Tooltip -->
+            <div id="tooltip-1"
+                class="absolute flex flex-col items-center  bg-[#1e1a36]  rounded-lg shadow-2xl w-[10rem] space-y-1 py-4 right-20 sm:w-[16rem] sm:space-y-2 sm:right:24 hover:cursor-default">
+                <img src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGFydGlzdGljJTIwcG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="Man with sunglasses" class="w-[4.5rem] h-[4.5rem] rounded-full object-cover mb-1">
+                <h1 class="text-white text-xs font-bold">Joe Sanders</h1>
+                <p class="text-[0.6rem] text-[#5e5d76] font-semibold">UX Designer<a href="https://www.google.com"
+                        class="text-[#6153ba] ml-1">@Google</a></p>
+                <div class="bg-[#6852f9] text-[0.7rem] font-medium text-white p-1.5 px-4 rounded shadow-2xl">Message
+                </div>
+            </div>
+        </button>
+
+        <!-- PROFILE 2 -->
+        <button id="profile-2"
+            class="max-w-xs bg-[#a693f9] w-[4rem] h-[4rem] rounded-full flex items-center justify-center box-border relative self-start">
+            <img src="https://images.unsplash.com/photo-1599231666334-ca0dbd7ad2da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFydGlzdGljJTIwd29tYW4lMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="Man with sunglasses" class="w-[3rem] h-[3rem] rounded-full object-cover object-top">
+            <!-- Tooltip -->
+            <div id="tooltip-2"
+                class="absolute flex flex-col items-center bg-white rounded-lg shadow-2xl w-[10rem] space-y-1 py-4 left-20 sm:w-[16rem] sm:space-y-2 sm:right:24">
+                <img src="https://images.unsplash.com/photo-1599231666334-ca0dbd7ad2da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFydGlzdGljJTIwd29tYW4lMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Woman looking to the right"
+                    class="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-top mb-1">
+                <h1 class="text-[#2e2b4a] text-xs font-bold">Jessie Linn</h1>
+                <p class="text-[0.6rem] text-[#2e2b4a] font-semibold">UX Designer<a href="https://www.amazon.com"
+                        class="text-[#6153ba] ml-1">@Amazon</a></p>
+                <div class="bg-[#6852f9] text-[0.7rem] font-medium text-white p-1.5 px-4 rounded shadow-2xl">Message
+                </div>
+            </div>
+        </button>
+
+        <!-- PROFILE 3 -->
+        <button id="profile-3"
+            class="max-w-xs bg-[#7263bc] w-[4rem] h-[4rem] rounded-full flex items-center justify-center box-border relative self-end">
+            <img src="https://images.unsplash.com/photo-1632478179636-23973447e686?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGFydGlzdGljJTIwcG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="Man with sunglasses" class="w-[3rem] h-[3rem] rounded-full object-cover">
+            <!-- Tooltip -->
+            <div id="tooltip-3"
+                class="absolute flex flex-col items-center  bg-[#1e1a36]  rounded-lg shadow-2xl w-[10rem] space-y-1 py-4 right-20 sm:w-[16rem] sm:space-y-2 sm:right:24">
+                <img src="https://images.unsplash.com/photo-1632478179636-23973447e686?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGFydGlzdGljJTIwcG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="Man with sunglasses" class="w-[4.5rem] h-[4.5rem] rounded-full object-cover mb-1">
+                <h1 class="text-white text-xs font-bold">Michael Reeves</h1>
+                <p class="text-[0.6rem] text-[#5e5d76] font-semibold">UX Designer<a href="https://www.apple.com"
+                        class="text-[#6153ba] ml-1">@Apple</a></p>
+                <div class="bg-[#6852f9] text-[0.7rem] font-medium text-white p-1.5 px-4 rounded shadow-2xl">Message
+                </div>
+            </div>
+        </button>
+    </div>
+</body>
+
+</html>

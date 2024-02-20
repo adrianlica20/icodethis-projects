@@ -1,0 +1,16 @@
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.user-profile {
+  will-change: scale;
+  transition: scale 0.15s, box-shadow 0.15s;
+}
+
+.user-profile:hover {
+  scale: 1.01;
+  box-shadow: 0 4px 8px rgba(10, 10, 105, 0.25);
+}

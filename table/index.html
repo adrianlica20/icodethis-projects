@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f8f9fd] min-h-screen flex justify-center items-center">
+    <div class="bg-[#f0f3fd] p-6 md:p-20 w-full md:max-w-4xl rounded space-y-5">
+        <div class="flex items-center gap-4 flex-col-reverse md:flex-row">
+            <div class="flex items-center gap-x-2 text-sm grow md:text-md">
+                <label for="show-entries">Show</label>
+                <select name="entries" id="show-entries" class="p-1 px-2 outline-none hover:cursor-pointer">
+                    <option value="four">4</option>
+                    <option value="eight">8</option>
+                    <option value="twelve">12</option>
+                </select>
+                <span>entries</span>
+            </div>
+            <div class="relative flex items-center md:ml-auto border w-full sm:max-w-[350px] md:w-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-2 text-gray-400" width="21" height="21"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                    <path d="M21 21l-6 -6"></path>
+                </svg>
+                <input type="search" class="w-full h-full p-2 pl-9 outline-none" placeholder="Search">
+            </div>
+        </div>
+
+        <section class="text-xs flex flex-col gap-y-1">
+            <div class="grid grid-cols-3 md:grid-cols-5 text-gray-500 mb-2">
+                <span class="flex items-center">
+                    FIRST NAME
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron-down hover:cursor-pointer transition"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                </span>
+                <span class="flex items-center justify-center md:justify-start">
+                    LAST NAME
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron-down hover:cursor-pointer transition"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                </span>
+                <span class="flex items-center justify-end md:justify-start">
+                    EMAIL
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron-down hover:cursor-pointer transition"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                </span>
+                <span class="items-center hidden md:flex">
+                    CREATED AT
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron-down hover:cursor-pointer transition"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                </span>
+            </div>
+
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Manuel</span>
+                <span class="user-last-name">Sutton</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">usike@udka.net</span>
+                <span class="created-at hidden md:block">09-06-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Daisy</span>
+                <span class="user-last-name">Kelly</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">ho@kepuf.edu</span>
+                <span class="created-at hidden md:block">09-06-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Shane</span>
+                <span class="user-last-name">Underwood</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">afawi@ajsenod.edu</span>
+                <span class="created-at hidden md:block">09-06-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Ray</span>
+                <span class="user-last-name">Wise</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">vebgelmo@ven.co.uk</span>
+                <span class="created-at hidden md:block">09-06-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Sue</span>
+                <span class="user-last-name">Hammond</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">zosub@bakus.edu</span>
+                <span class="created-at hidden md:block">09-06-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Roxie</span>
+                <span class="user-last-name">Banks</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">mekruj@orewera.co.uk</span>
+                <span class="created-at hidden md:block">09-06-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Alfred</span>
+                <span class="user-last-name">Reese</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">upigohi@sop.edu</span>
+                <span class="created-at hidden md:block">05-29-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+            <div
+                class="user-profile grid grid-cols-3 md:gap-2 md:grid-cols-5 items-center bg-white p-2.5 h-12 rounded-lg hover:cursor-pointer">
+                <span class="user-first-name">Maurice</span>
+                <span class="user-last-name">Lowe</span>
+                <span class="user-email text-[0.85em] md:text-xs text-right md:text-left">hib@oksuod.gov</span>
+                <span class="created-at hidden md:block">05-29-2020</span>
+                <button
+                    class="workplace-link border rounded p-1.5 w-max text-xs border-blue-700 text-blue-700 hidden md:block transition hover:bg-blue-100/40">Go
+                    to
+                    workplace</button>
+            </div>
+
+            <div class="flex gap-x-1 h-8 mt-4 self-end">
+                <button class="bg-white/50 border p-1 px-2 rounded text-gray-300 flex items-center" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="18"
+                        height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M15 6l-6 6l6 6"></path>
+                    </svg>
+                    Previous
+                </button>
+                <button class="bg-white border p-1 rounded px-2 text-gray-500 flex items-center">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
+                        width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

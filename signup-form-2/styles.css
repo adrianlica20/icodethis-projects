@@ -1,0 +1,14 @@
+form::after {
+  content: '';
+  width: 110%;
+  height: 106%;
+  position: absolute;
+  background-color: #e4edfa;
+  top: -3%;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+form {
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+}
