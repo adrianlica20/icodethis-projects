@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #eff0f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.christmas-card {
+  width: 31rem;
+  height: 33rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  border-top-right-radius: 2rem;
+  position: relative;
+  box-shadow: 2px 2px 17px #d0d0d0;
+}
+
+.christmas-card::after {
+  content: '\00d7';
+  position: fixed;
+  transform: translate(13rem, -14rem);
+  color: grey;
+  font-size: 2.7rem;
+  font-weight: 200;
+}
+
+.merry-xmas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.message {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 200;
+}
+
+.discount {
+  color: #e3a857;
+  font-weight: 500;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #242e4c;
+  padding: 1.1rem 3.2rem;
+  border: 1px solid #242e4c;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #323f68;
+  transition: all 0.5s ease-in;
+}
+
+button:hover {
+  padding: 1.1rem 1rem;
+  font-weight: 600;
+  border-radius: 2.5rem;
+  box-shadow: 0px 0px 40px #fce570;
+  cursor: pointer;
+}

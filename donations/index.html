@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#bbccef] flex justify-center items-center min-h-screen">
+
+    <div
+        class="bg-white container relative p-6 py-10 h-screen md:h-max md:p-14 md:rounded-3xl flex flex-col gap-y-10 md:gap-y-6 md:justify-center items-center max-w-3xl">
+        <div
+            class="absolute right-1 top-1 md:right-3 md:top-3 p-1 md:p-3 text-gray-400 bg-[#f6f8fe] rounded-full transition [&>svg]:hover:scale-110 md:[&>svg]:hover:scale-125 hover:cursor-pointer hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="transition" width="22" height="22" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+            </svg>
+        </div>
+
+        <img class="w-24 md:absolute left-12 md:top-14" src="https://cdn-icons-png.flaticon.com/512/1881/1881217.png"
+            alt="">
+
+        <div class="flex flex-col gap-y-10 md:gap-y-9 md:ml-14">
+            <div class="space-y-5 text-center md:text-left">
+                <h1 class="text-2xl font-semibold md:text-3xl md:tracking-wide">Your gift changes lives</h1>
+                <p class="max-w-[20rem] text-gray-600 mx-auto text-sm md:ml-0 md:text-md">Pledge your support today
+                    so that we can help more women in 2023.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 text-gray-400">
+                <div class="relative h-12 md:h-16">
+                    <label for="five"
+                        class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none">$5</label>
+                    <input
+                        class="donations appearance-none h-full w-16 md:w-24 flex transition bg-[#f6f8fe] rounded md:rounded-lg hover:cursor-pointer focus:border focus:border-blue-600 focus:bg-white focus:shadow-[0px_7px_10px_-6px_#0000ff54]"
+                        type="checkbox" name="donation-amount" id="five" value="5">
+                </div>
+                <div class="relative h-12 md:h-16">
+                    <label for="five"
+                        class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none">$10</label>
+                    <input
+                        class="donations appearance-none h-full w-16 md:w-24 flex transition bg-[#f6f8fe] rounded md:rounded-lg hover:cursor-pointer focus:border focus:border-blue-600 focus:bg-white focus:shadow-[0px_7px_10px_-6px_#0000ff54]"
+                        type="checkbox" name="donation-amount" id="ten" value="10">
+                </div>
+                <div class="relative h-12 md:h-16">
+                    <label for="five"
+                        class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none">$15</label>
+                    <input
+                        class="donations appearance-none h-full w-16 md:w-24 flex transition bg-[#f6f8fe] rounded md:rounded-lg hover:cursor-pointer focus:border focus:border-blue-600 focus:bg-white focus:shadow-[0px_7px_10px_-6px_#0000ff54]"
+                        type="checkbox" name="donation-amount" id="fifteen" value="15">
+                </div>
+
+
+                <div class="flex rounded md:rounded-lg border">
+                    <span class="bg-[#f6f8fe] flex items-center px-4 h-full">$</span>
+                    <div class="relative h-12 md:h-16 w-32">
+                        <input type="number" id="amount"
+                            class="donations outline-blue-600 h-full w-32 rounded-r md:rounded-r-lg text-center" min="0"
+                            maxlength="number" placeholder="Amount">
+                    </div>
+                </div>
+            </div>
+            <button
+                class="donate-btn text-white bg-[#ec1c6d] h-12 w-28 md:h-14 md:w-32 self-center md:self-start rounded md:rounded-lg hover:bg-[#ec1c6d]/80">DONATE</button>
+        </div>
+    </div>
+
+    <!-- MODAL SECTION -->
+    <section class="modal hiddenM">
+        <img class="w-40" src="https://cdn-icons-png.flaticon.com/512/5359/5359966.png" alt="">
+        <p class="message">
+            FOR DONATING!
+        </p>
+        <button class="back-btn hover:bg-[#5b369c]/30">BACK</button>
+    </section>
+    <div class="overlay hiddenM"></div>
+    <!-- END OF MODAL SECTION -->
+    <script src="script.js"></script>
+</body>
+
+</html>

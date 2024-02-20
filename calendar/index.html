@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-tr from-[#82455c] to-[#3b4650] flex justify-center items-center min-h-screen">
+    <div
+        class="bg-[#6e6b73] text-white space-y-6 box-border shadow-lg rounded-lg overflow-hidden max-w-md md:max-w-2xl">
+
+        <div id="title" class="bg-[#85848b] p-3 w-full h-full flex justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 hover:cursor-pointer hover:scale-105">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            <h1>January 2023</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 hover:cursor-pointer hover:scale-105">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </div>
+
+        <div id="days-grid" class="px-5">
+            <div id="day-of-week" class="[&>*]:text-center">
+                <span>Mo</span>
+                <span>Tu</span>
+                <span>We</span>
+                <span>Th</span>
+                <span>Fr</span>
+                <span>Sa</span>
+                <span>Su</span>
+            </div>
+            <div id="day-of-month" class="">
+                <button class="span-6"></button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>10</button>
+                <button>11</button>
+                <button>12</button>
+                <button>13</button>
+                <button class="addEventPink">14</button>
+                <button>15</button>
+                <button>16</button>
+                <button>17</button>
+                <button>18</button>
+                <button class="addEvent">19</button>
+                <button>20</button>
+                <button>21</button>
+                <button>22</button>
+                <button>23</button>
+                <button>24</button>
+                <button>25</button>
+                <button>26</button>
+                <button>27</button>
+                <button>28</button>
+                <button>29</button>
+                <button>30</button>
+                <button class="addEventPink">31</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

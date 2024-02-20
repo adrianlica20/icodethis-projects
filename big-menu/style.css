@@ -1,0 +1,28 @@
+nav ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  scale: 0;
+  transition: scale 0.15s ease-in;
+  background: linear-gradient(to right, #2b9ebe, #3d71b9);
+}
+
+nav ul li:hover::after {
+  scale: 1;
+}
+
+nav ul li:nth-of-type(3)::after {
+  scale: 1;
+}
+
+#resources-dropdown {
+  background: linear-gradient(to right, #40c7e4, #468de3);
+}

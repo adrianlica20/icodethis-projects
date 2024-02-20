@@ -1,0 +1,7 @@
+textarea {
+  resize: none;
+}
+
+body {
+  background: linear-gradient(45deg, #fff 50%, #0091ea 50%);
+}

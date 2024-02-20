@@ -1,0 +1,134 @@
+<html>
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-sky-100 flex justify-center items-center min-h-screen">
+
+      <div id="main-component"
+            class="bg-white rounded-lg flex flex-col gap-5 m-2 md:m-0 w-64 h-[370px] shadow-lg overflow-hidden">
+            <!-- LOGIN MENU -->
+            <div id="login-screen" class="flex flex-col gap-5 p-3">
+                  <div class="dropdown-container text-[0.6rem] self-end text-gray-500">
+                        <button class="link flex items-center">
+                              <span>CHANGE ACCOUNT</span>
+                              <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="inline-block icon-chevron-down transition-all" width="16" height="16"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M6 9l6 6l6 -6"></path>
+                              </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                              <span>The Hound</span>
+                              <span>Cersei</span>
+                              <span>John Snow</span>
+                        </div>
+                  </div>
+
+                  <div class="img-wrapper w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center mx-auto">
+                        <img class="aspect-square w-20 rounded-full object-cover position-top"
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_vN_ANOiFu84OseD9ywZ8jLvlKhu5Ee6CBg&usqp=CAU"
+                              alt="user-profile">
+                  </div>
+
+                  <h1 class="text-center text-gray-700 font-light text-sm">Welcome back, <br />
+                        <span class="font-bold">Arya</span>
+                  </h1>
+
+                  <form class="px-4 flex flex-col items-center gap-2">
+                        <input id="password" type="password" placeholder="Enter your password"
+                              class="border rounded p-2 text-xs w-full outline-none" required minlength="6">
+                        <button id="login-btn"
+                              class="bg-slate-800 text-white p-2 px-8 text-[0.6rem] rounded transition hover:bg-slate-700">LOG
+                              IN</button>
+                        <button class="text-[0.6rem] text-blue-700 mt-10 hover:underline">Unable to log in?</button>
+                  </form>
+            </div>
+
+            <!-- LOGGED USED -->
+            <div id="logged-user" class="flex flex-col gap-3 h-full bg-blue-50 hidden">
+                  <article class="flex items-center gap-3 p-3 text-xs bg-white py-2 text-gray-600">
+                        <img class="aspect-square w-10 rounded-full object-cover position-top"
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_vN_ANOiFu84OseD9ywZ8jLvlKhu5Ee6CBg&usqp=CAU"
+                              alt="user-profile">
+                        <span>Arya</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                              class="ml-auto icon-tabler-search hover:text-blue-700 hover:cursor-pointer" width="20"
+                              height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                              <path d="M21 21l-6 -6"></path>
+                        </svg>
+                  </article>
+
+                  <article id="targets-component"
+                        class="flex items-center p-3 m-3 bg-white justify-between rounded shadow transition-all hover:bg-slate-50 hover:shadow-lg hover:cursor-pointer">
+                        <span class="font-semibold text-sm">Targets</span>
+                        <div id="target-counter" class="relative w-8 h-8 rounded-full flex items-center justify-center">
+                              <span class="text-[0.68rem] font-semibold z-10">4</span>
+                        </div>
+                  </article>
+            </div>
+
+            <!-- TARGETS CONTAINER -->
+            <div id="all-targets-component" class="flex flex-col justify-between h-full hidden">
+                  <nav class="flex items-center gap-2 p-3 text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                              class="back-arrow hover:cursor-pointer transition-all hover:-translate-x-[2px]" width="20"
+                              height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M5 12l14 0"></path>
+                              <path d="M5 12l6 6"></path>
+                              <path d="M5 12l6 -6"></path>
+                        </svg>
+                        <span class="font-semibold">Targets</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                              class="ml-auto icon-tabler-dots hover:cursor-pointer hover:scale-110" width="20"
+                              height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                              <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        </svg>
+                  </nav>
+
+                  <!-- NEW TARGETS GO IN HERE -->
+                  <div id="all-targets"
+                        class="p-3 text-slate-800 font-semibold bg-blue-50 h-full flex flex-col gap-y-1.5">
+                  </div>
+
+                  <button id="add-target-btn"
+                        class="bg-sky-950 w-full h-14 flex items-center justify-center gap-2 rounded-b-lg mt-auto text-[0.7rem] tracking-wider text-white transition hover:bg-sky-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="16"
+                              height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M12 5l0 14"></path>
+                              <path d="M5 12l14 0"></path>
+                        </svg>
+                        ADD NEW
+                  </button>
+
+                  <!-- MODAL SECTION -->
+                  <section class="modal hiddenM">
+                        <label>Who's your next target?</label>
+                        <input type="text" class="target-name" spellcheck="false">
+                        <button class="confirm-target-btn transition hover:bg-slate-700">ADD TARGET</button>
+                  </section>
+                  <div class="overlay hiddenM"></div>
+                  <!-- END OF MODAL SECTION -->
+            </div>
+      </div>
+</body>
+
+</html>

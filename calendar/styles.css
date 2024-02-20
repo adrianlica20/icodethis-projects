@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#day-of-week {
+  background-image: linear-gradient(to right, #82f6ce, #4ec2f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(7, 50px);
+  font-weight: 600;
+}
+
+#day-of-month {
+  width: full;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(7, 50px);
+  grid-template-rows: minmax(100px, auto), repeat(5, 100px);
+}
+
+#day-of-month > button {
+  cursor: pointer;
+  outline: none;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.05s linear;
+}
+
+#day-of-month > button:hover {
+  background-color: #51c5f6;
+  color: #5e4f62;
+}
+
+#day-of-month > button:focus {
+  background-color: #51c5f6;
+  color: #5e4f62;
+}
+
+#day-of-month .span-6 {
+  grid-column: span 6;
+}
+
+#day-of-month .span-6:hover,
+#day-of-month .span-6:focus {
+  background-color: transparent;
+  cursor: default;
+}
+
+.addEventPink {
+  position: relative;
+}
+
+.addEventPink::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #f06391;
+  position: absolute;
+  bottom: 8px;
+  left: 45%;
+}
+
+.addEvent {
+  position: relative;
+}
+
+.addEvent::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #feab00;
+  position: absolute;
+  bottom: 8px;
+  left: 40%;
+}
+
+.addEvent::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #f06391;
+  position: absolute;
+  bottom: 8px;
+  left: 52%;
+}

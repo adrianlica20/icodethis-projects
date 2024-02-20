@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  background-image: url('./images/snow_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #f2f2f2;
+  width: 100%;
+  max-width: 80rem;
+  min-height: 30rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  position: relative;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+
+.countdown {
+  color: #305c70;
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.countdown > div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 6.5rem;
+  min-height: 8.5rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.countdown > div > span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.snowman-img {
+  max-width: 8rem;
+  position: absolute;
+  bottom: 0;
+  left: 8rem;
+}
+
+.santa-img {
+  max-width: 11rem;
+  position: absolute;
+  bottom: 0;
+  right: 4rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 18rem;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  header > p {
+    font-size: 0.8rem;
+  }
+
+  .countdown {
+    margin-top: 0.5rem;
+  }
+
+  .countdown > div {
+    width: 3.5rem;
+    min-height: 4.5rem;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .countdown > div > span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .snowman-img {
+    max-width: 3.5rem;
+    left: 1rem;
+  }
+
+  .santa-img {
+    max-width: 5rem;
+    right: 1rem;
+  }
+}

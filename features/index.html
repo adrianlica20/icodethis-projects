@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0d1e5c] flex flex-col [&>*]:text-[#b6c1e2] items-center justify-center min-h-screen">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <h1 class="text-3xl mt-8 md:mt-32 md:text-4xl">Features</h1>
+    <div
+        class="grid p-8 gap-x-28 rounded w-full gap-y-28 mt-24 md:mt-0 md:gap-y-10 md:grid-cols-2 md:w-10/12 md:max-w-5xl">
+        <div class="wrapper flex relative">
+            <div class="custom-icon w-20 h-20 bg-[#2c3d7b] rounded-full absolute -top-20 md:-top-3 md:-left-24">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-device-tv relative top-5 -right-8" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M16 3l-4 4l-4 -4"></path>
+                </svg>
+            </div>
+            <div class="text-container z-10">
+                <h2 class="text-xl font-semibold">Boards</h2>
+                <p>Projects are represented as boards in the system. Along with displaying essential information about
+                    the project, they can be set to public or private, depending on th user's preferences.</p>
+            </div>
+        </div>
+
+
+        <div class="wrapper flex relative">
+            <div class="custom-icon w-20 h-20 bg-[#2c3d7b] rounded-full absolute -top-20 md:-top-3 md:-left-24">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-clipboard-list  relative top-5 -right-8" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+                    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M9 12l.01 0"></path>
+                    <path d="M13 12l2 0"></path>
+                    <path d="M9 16l.01 0"></path>
+                    <path d="M13 16l2 0"></path>
+                </svg>
+            </div>
+            <div class="text-container z-10">
+                <h2 class="text-xl font-semibold">Tasks</h2>
+                <p>Tasks and subtasks are the smallest chunks of executable assignments. Tasks can be assigned to
+                    multiple
+                    users, given a priority and easily moved across different states in the development pipeline.</p>
+            </div>
+        </div>
+
+
+        <div class="wrapper flex relative">
+            <div class="custom-icon w-20 h-20 bg-[#2c3d7b] rounded-full absolute -top-20 md:-top-3 md:-left-24">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-users relative top-5 -right-8" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                </svg>
+            </div>
+            <div class="text-container z-10">
+                <h2 class="text-xl font-semibold">Members</h2>
+                <p>Users invited to work together with the common goal of delivering a successful project. They can have
+                    several different roles as active members of the development, or simply followers of the board.</p>
+            </div>
+        </div>
+
+
+        <div class="wrapper flex relative">
+            <div class="custom-icon w-20 h-20 bg-[#2c3d7b] rounded-full absolute -top-20 md:-top-3 md:-left-24">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-hourglass relative top-5 -right-8" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.5 7h11"></path>
+                    <path d="M6.5 17h11"></path>
+                    <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+                    <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+                </svg>
+            </div>
+            <div class="text-container z-10">
+                <h2 class="text-xl font-semibold">Timer</h2>
+                <p>The time tracking feature enables the users to easily measure the time spent on a specific task. Once
+                    tracked
+                    and logged, the time can be seen and edited in a dedicated Time Records view for additional control.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="wrapper flex relative">
+            <div class="custom-icon w-20 h-20 bg-[#2c3d7b] rounded-full absolute -top-20 md:-top-3 md:-left-24">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-star relative top-5 -right-8" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                    </path>
+                </svg>
+            </div>
+            <div class="text-container z-10">
+                <h2 class="text-xl font-semibold">Follow</h2>
+                <p>Ahead offers the possibility to follow the development of a project and be notified of its
+                    activities. Users can follow entire boards, or they can choose to follow just specific tasks within
+                    a board.</p>
+            </div>
+        </div>
+
+
+        <div class="wrapper flex relative">
+            <div class="custom-icon w-20 h-20 bg-[#2c3d7b] rounded-full absolute -top-20 md:-top-3 md:-left-24">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-clock relative top-5 -right-8" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                    <path d="M12 7l0 5l3 3"></path>
+                </svg>
+            </div>
+            <div class="text-container z-10">
+                <h2 class="text-xl font-semibold">Recently Accessed</h2>
+                <p>The boards that you actively working on can be easily accessed with the Recently Accessed feature.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="circle-bottom"></div>
+    <div class="circle-bottom"></div>
+    <div class="circle-bottom"></div>
+</body>
+
+</html>

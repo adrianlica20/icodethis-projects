@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f089b1;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.birthdays {
+  background-color: #fff;
+  width: 25rem;
+  padding: 3.5rem;
+  border-radius: 0.7rem;
+  box-shadow: 50px 50px 20px #e06e9b;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 2.2rem 0;
+}
+
+.celebrant {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-height: 4.2rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+
+.name-age h2 {
+  font-size: 1.2rem;
+}
+
+.name-age h2,
+.name-age p {
+  margin: 0;
+}
+
+.name-age p {
+  color: grey;
+}
+
+.view-all-btn {
+  font-family: inherit;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  color: #fff;
+  background: linear-gradient(to right, #e66dd0, #fe69a3);
+  box-shadow: 3px 3px 8px #f8acc9;
+}
+
+.view-all-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #fe69a3, #e66dd0);
+}

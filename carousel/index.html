@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+</head>
+
+<body class="bg-[#f4efe5] min-h-screen flex sm:p-4 sm:justify-center sm:items-center">
+    <div class="bg-white w-full flex flex-col items-center gap-y-9 py-4 sm:max-w-4xl sm:p-10 sm:rounded-lg">
+        <nav>
+            <ul class="gap-x-5 text-[#bab8b4] hidden sm:flex">
+                <li class="p-2 px-4 transition rounded hover:text-black hover:bg-[#fef8ea] hover:cursor-pointer">
+                    All</li>
+                <li class="p-2 px-4 transition rounded hover:text-black hover:bg-[#fef8ea] hover:cursor-pointer">
+                    Photography</li>
+                <li class="p-2 px-4 transition rounded hover:text-black hover:bg-[#fef8ea] hover:cursor-pointer">
+                    Fashion</li>
+                <li class="p-2 px-4 transition rounded hover:text-black hover:bg-[#fef8ea] hover:cursor-pointer">
+                    Sculpture</li>
+            </ul>
+            <!-- Hamburger dropdown -->
+            <nav class="fixed right-0 sm:hidden">
+                <div class="sm:hidden">
+                    <button class="navbar-burger flex items-center text-[#38210f] p-3">
+                        <svg class="block h-4 w-4 fill-[#38210f]" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-200 opacity-25"></div>
+                <nav
+                    class="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm p-2.5 bg-white border-l overflow-y-auto">
+                    <button class="navbar-close self-end">
+                        <svg class="h-6 w-6 text-[#38210f] cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="burger-link block p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">All</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="burger-link block p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">Photography</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="burger-link flex p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">Fashion</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-[#38210f] hover:bg-[#f9f7f4] hover:text-black rounded"
+                                    href="#">
+                                    <div class="leading-none">
+                                        <h2 class="font-semibold flex items-center gap-x-5">Sculpture</h2>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+
+        <!-- Carousel Wannabe-->
+        <div class="flex items-center gap-x-2">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-chevron-left hidden sm:block transition hover:cursor-pointer hover:scale-125"
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 6l-6 6l6 6"></path>
+                </svg>
+            </span>
+
+            <div class="grid gap-5 sm:grid-cols-3">
+                <div
+                    class="flex flex-col items-center rounded-lg overflow-hidden transition hover:cursor-pointer hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1558611913-d707111c702e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGFydCUyMHNjdWxwdHVyZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"
+                        alt="">
+                    <div class="border border-[#f5f5f5] rounded-b-lg flex flex-col items-center w-full py-6 sm:py-4">
+                        <span class="font-semibold">Britta Clay Art</span>
+                        <span class="text-[#bab8b4] text-sm">Sat, 24 Oct 2020</span>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col items-center rounded-lg overflow-hidden transition hover:cursor-pointer hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1558016183-68d5d7b8851b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJhbG9vbnxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"
+                        alt="">
+                    <div class="border border-[#f5f5f5] rounded-b-lg flex flex-col items-center w-full py-6 sm:py-4">
+                        <span class="font-semibold">Belgian Baloon Trophy</span>
+                        <span class="text-[#bab8b4] text-sm">Sat, 20 May 2020</span>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col items-center rounded-lg overflow-hidden transition hover:cursor-pointer hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1474518551598-147ee65f265e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHJvY2tzfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                        alt="">
+                    <div class="border border-[#f5f5f5] rounded-b-lg flex flex-col items-center w-full py-4">
+                        <span class="font-semibold">Way of the Hunt</span>
+                        <span class="text-[#bab8b4] text-sm">Fri, 14 Aug 2020</span>
+                    </div>
+                </div>
+            </div>
+
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-chevron-right hidden sm:block transition hover:cursor-pointer hover:scale-125"
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </span>
+        </div>
+
+        <!-- Show more button -->
+        <button
+            class="bg-[#eb6649] text-white border-2 border-[#eb6649] p-2 px-5 rounded font-semibold shadow-lg transition hover:text-[#eb6649] hover:bg-white">Show
+            more</button>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

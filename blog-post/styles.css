@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+.backArrow {
+  display: flex;
+}
+
+.backArrow:hover {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scaleX(var(--s, 1)) translate(-4px);
+  }
+  100% {
+    transform: scaleX(var(--s, 1)) translate(4px);
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.fadeout-div {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.104),
+    rgba(255, 255, 255, 1)
+  );
+}

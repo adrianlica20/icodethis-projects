@@ -1,0 +1,35 @@
+.main::before {
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: #b6325d;
+  top: -75px;
+  left: -75px;
+  z-index: -1;
+}
+
+.main::after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-bottom: 30px solid #b6325d;
+  border-right: 30px solid #b6325d;
+  background-color: #4e1559;
+  bottom: -60px;
+  right: -60px;
+  z-index: -1;
+}
+
+.qna-container:hover {
+  box-shadow: 0 4px 5px #4e15597c;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main::after,
+  .main::before {
+    display: none;
+  }
+}

@@ -1,0 +1,25 @@
+body::after {
+  content: "";
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: #6687ff42;
+  filter: blur(9.5rem);
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.see-how {
+  text-shadow: 0 0 12px;
+}
+
+@media (max-width: 640px) {
+  body::after {
+    width: 15rem;
+    height: 15rem;
+    background-color: #6687ff73;
+  }
+}

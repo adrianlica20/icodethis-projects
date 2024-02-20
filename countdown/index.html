@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex flex-col items-center min-h-screen">
+    <h1 class="text-center font-bold text-3xl mx-10 my-12 sm:mx-0 sm:my-20">Until I quit my 9 to 5 job</h1>
+
+    <div id="timer" class="flex flex-wrap justify-center gap-4 sm:gap-x-16 sm:gap-y-8">
+        <div class="flex flex-col items-center">
+            <span id="months" class="counter text-5xl font-semibold sm:text-7xl">2</span>
+            <span>months</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <span id="days" class="counter text-5xl font-semibold sm:text-7xl">3</span>
+            <span>days</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <span id="hours" class="counter text-5xl font-semibold sm:text-7xl">9</span>
+            <span>hours</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <span id="minutes" class="counter text-5xl font-semibold sm:text-7xl">58</span>
+            <span>minutes</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <span id="seconds" class="counter text-5xl font-semibold sm:text-7xl">16</span>
+            <span>seconds</span>
+        </div>
+    </div>
+</body>
+
+</html>

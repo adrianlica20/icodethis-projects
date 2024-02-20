@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#2776fa] flex justify-center items-center min-h-screen">
+    <div id="component" class="bg-[#eef5ff] rounded max-w-md">
+        <div class="options bg-[#1965d9] p-5 space-y-7">
+            <div class="title flex items-center relative">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute icon icon-tabler icon-tabler-chevron-left transition rounded-full hover:scale-110 hover:cursor-pointer hover:bg-[#3a79d9]"
+                    width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <polyline points="15 6 9 12 15 18" />
+                </svg>
+                <h1 class="text-2xl text-white mx-auto">Find Friends</h1>
+            </div>
+            <div class="search-bar relative flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 icon icon-tabler icon-tabler-search"
+                    width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#c4daf7" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+                <input id="search" class="p-4 pl-12 rounded-full bg-[#3a79d9] w-full text-[#c4daf7] outline-none"
+                    type="search" spellcheck="false" placeholder="Enter a friend's name">
+            </div>
+        </div>
+
+        <!-- FRIENDS CONTAINER -->
+        <div class="friends-container space-y-5 p-4">
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4 mr-2.5">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105"
+                        src="https://pbs.twimg.com/profile_images/1435318001478389762/We05XU63_400x400.jpg" alt="">
+                    <h2 class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Kassandra
+                        Sanch</h2>
+                </div>
+                <button
+                    class="follow-btn bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 transition hover:bg-none hover:text-[#1863d6]">Follow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4 mr-2.5">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105"
+                        src="https://pbs.twimg.com/profile_images/1454861068233228289/6sn9BYOf_400x400.jpg" alt="">
+                    <h2 class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Csaba Kissi
+                    </h2>
+                </div>
+                <button
+                    class="follow-btn bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 transition hover:bg-none hover:text-[#1863d6]">Follow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4 mr-2.5">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105"
+                        src="https://pbs.twimg.com/profile_images/1490901062428946436/SPg2WmEU_400x400.jpg" alt="">
+                    <h2 class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Jack Forge
+                    </h2>
+                </div>
+                <button
+                    class="follow-btn bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 transition hover:bg-none hover:text-[#1863d6]">Follow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4 mr-2.5">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105"
+                        src="https://pbs.twimg.com/profile_images/1602243192836988928/l9YWKqE7_400x400.jpg" alt="">
+                    <h2 class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Eddie Jaoude
+                    </h2>
+                </div>
+                <button
+                    class="follow-btn bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 transition hover:bg-none hover:text-[#1863d6]">Follow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4 mr-2.5">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105"
+                        src="https://pbs.twimg.com/profile_images/1612507803842932736/PLiJMD_l_400x400.jpg" alt="">
+                    <h2 class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer ">Pratham</h2>
+                </div>
+                <button
+                    class="follow-btn bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 transition hover:bg-none hover:text-[#1863d6]">Follow</button>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="modal hiddenM box-border">
+        <div>
+            <h3 class="titleMessage text-center font-bold text-lg mb-6">THIS IS MADNESS!</h3>
+            <p class="message">Are you sure you want to pursue this foolish action?
+            </p>
+        </div>
+        <button class="btn mt-6">I'm sure...</button>
+    </section>
+    <div class="overlay hiddenM"></div>
+</body>
+
+</html>

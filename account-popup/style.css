@@ -1,0 +1,36 @@
+body::after {
+  content: '';
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: #82fffe;
+  filter: blur(9.5rem);
+  z-index: -1;
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+}
+
+body::before {
+  content: '';
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: #6ab4e2;
+  filter: blur(9.5rem);
+  z-index: -1;
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+}
+
+@media (max-width: 768px) {
+  body::after,
+  body::before {
+    display: none;
+  }
+
+  body {
+    background: linear-gradient(to bottom, black, #82fffe, #6ab4e2, black);
+  }
+}

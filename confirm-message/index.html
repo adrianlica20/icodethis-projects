@@ -1,0 +1,77 @@
+<html>
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[#181028] flex justify-center items-center min-h-screen px-4">
+      <div id="pop-up"
+            class="bg-[#322f59] text-gray-300 text-center p-8 py-14 rounded-md flex flex-col items-center gap-y-6 transition origin-top-right bg-opacity-80 shadow-xl max-w-lg relative">
+            <div class="flex flex-col items-center gap-2">
+                  <div class="relative">
+                        <svg width="50" height="50" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                              <path fill="#9bead9"
+                                    d="M13.5 5.88c-.28 0-.5-.22-.5-.5V1.5c0-.28-.22-.5-.5-.5h-9c-.28 0-.5.22-.5.5v2c0 .28-.22.5-.5.5S2 3.78 2 3.5v-2C2 .67 2.67 0 3.5 0h9c.83 0 1.5.67 1.5 1.5v3.88c0 .28-.22.5-.5.5Z" />
+                              <path fill="#32b8fe"
+                                    d="M14.5 16h-13C.67 16 0 15.33 0 14.5v-10C0 3.67.67 3 1.5 3h4.75c.16 0 .31.07.4.2L8 5h6.5c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5ZM1.5 4c-.28 0-.5.22-.5.5v10c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-8c0-.28-.22-.5-.5-.5H7.75a.48.48 0 0 1-.4-.2L6 4H1.5Z" />
+                              <path fill="#9bead9"
+                                    d="M5.5 13h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2c.28 0 .5.22.5.5s-.22.5-.5.5Z" />
+                        </svg>
+                        <svg class="absolute bottom-1 right-1" width="18" height="18" viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill="#B1B4B5"
+                                    d="M376.749 349.097c-13.531 0-24.5-10.969-24.5-24.5V181.932c0-48.083-39.119-87.203-87.203-87.203c-48.083 0-87.203 39.119-87.203 87.203v82.977c0 13.531-10.969 24.5-24.5 24.5s-24.5-10.969-24.5-24.5v-82.977c0-75.103 61.1-136.203 136.203-136.203s136.203 61.1 136.203 136.203v142.665c0 13.531-10.969 24.5-24.5 24.5z" />
+                              <path fill="#FFB636"
+                                    d="M414.115 497.459H115.977c-27.835 0-50.4-22.565-50.4-50.4V274.691c0-27.835 22.565-50.4 50.4-50.4h298.138c27.835 0 50.4 22.565 50.4 50.4v172.367c0 27.836-22.565 50.401-50.4 50.401z" />
+                              <path fill="#FFD469"
+                                    d="M109.311 456.841h-2.525c-7.953 0-14.4-6.447-14.4-14.4V279.309c0-7.953 6.447-14.4 14.4-14.4h2.525c7.953 0 14.4 6.447 14.4 14.4v163.132c0 7.953-6.447 14.4-14.4 14.4z" />
+                        </svg>
+                  </div>
+                  <small
+                        class="bg-gradient-to-r from-[#32b8fe] to-[#9bead9] shadow-lg rounded-full text-[#322f59] px-3 py-1 font-medium">File
+                        locked</small>
+            </div>
+
+
+            <h1 class="text-xl font-semibold">Your request to access the file has been sent</h1>
+
+            <small class="max-w-xs">You will receive an email if and when your request has been approved.</small>
+
+            <small>Find out more at the <a class="text-[#32b8fe] underline" href="#">Help Center</a></small>
+
+            <button id="close-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                        class="absolute -right-3 -top-3 bg-gradient-to-br from-[#6f66a0] to-[#322f59] p-1 w-8 h-8 shadow-lg rounded-full cursor-pointer transition hover:shadow-xl hover:scale-110"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                  </svg>
+            </button>
+      </div>
+
+
+      <div id="coffee"
+            class="absolute bg-[#322f59] text-gray-300 text-center p-8 rounded-md flex flex-col items-center gap-y-2 transition origin-center bg-opacity-80 shadow-xl cursor-pointer scale-0 hover:shadow-2xl hover:bg-opacity-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coffee" width="50" height="50"
+                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                        d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1" />
+                  <path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+                  <path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+                  <path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5z" />
+                  <path d="M16.746 16.726a3 3 0 1 0 .252 -5.555" />
+            </svg>
+            <p class="font-medium">Coffee break</p>
+      </div>
+</body>
+
+</html>
